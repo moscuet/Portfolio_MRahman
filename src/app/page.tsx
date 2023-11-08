@@ -25,7 +25,7 @@ export default function Home() {
   const [skills, setSkills] = useState<SkillsState>({ Frontend: [], Backend: [], Database: [], DevOps: [], Other: [], });
 
   useEffect(() => {
-  
+
     async function fetchSkills() {
       const response = await fetch('/api/skills');
       const data = await response.json();
@@ -78,8 +78,8 @@ export default function Home() {
 
           <div id="about-section" className="mb-8">
             <button
-  className=" animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl animate-button"
-  >
+              className=" animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl animate-button"
+            >
               ABOUT
             </button>
             <div className="pl-4">
@@ -101,7 +101,7 @@ export default function Home() {
             >
               PROJECTS
             </button>
-            <div className="pl-4">
+            <div className="pl-2">
               <ProjectCard
                 id='1'
                 imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
@@ -119,7 +119,7 @@ export default function Home() {
 
           <div id="skills-section" className="mb-8">
             <button
-              className="animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl" // Added text-xl for 20px text size
+              className="animate-sideways mb-6 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl" // Added text-xl for 20px text size
             >
               SKILLS
             </button>
