@@ -29,21 +29,72 @@
   /* text animation: Full stack developer */
   @keyframes typing {
     0% { width: 0; }
-    17.5% { width: 100%; } 
+    50% { width: 100%; } 
     100% { width: 100%; }
-  }
-  
-  @keyframes blink-caret {
-    0%, 17.5%, 100% { border-color: transparent; }
-    17.75% { border-color: orange; } 
-    18.25% { border-color: transparent; } 
   }
   
   .typewriter {
     overflow: hidden;
-    border-right: .15em solid orange; 
     white-space: nowrap;
     letter-spacing: .15em;
-    animation: typing 20s steps(40, end) infinite, blink-caret 20s step-end infinite; 
+    animation: typing 20s steps(40, end) infinite;
+    border-right: none; /* Removes the cursor */
+  }
+  
+
+  /* light play */
+
+  @keyframes lightplay {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .lightplay-text {
+    /* Gradient with white and a lighter shade of the background color */
+    background: linear-gradient(
+      90deg, 
+      rgba(255, 255, 255, 1) 0%, 
+      rgba(129, 129, 129, 1) 50%, 
+      rgba(255, 255, 255, 1) 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Fallback for non-WebKit browsers */
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    animation: lightplay 3s ease-in-out infinite;
+  }
+  
+  
+  
+
+  /* animated cursor */
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  a:hover {
+    animation: pulse 1s infinite;
+  }
+  
+
+  .animated-cursor:hover {
+    animation: pulse 1s infinite;
   }
   
