@@ -8,6 +8,7 @@ import ScrollableContent from '@/components/ScroolBar';
 import ProjectCard from '@/components/ProjectCard';
 import { useEffect, useState } from 'react';
 import SkillsList from '@/components/SkillsList';
+
 type Skill = {
   id: number;
   name: string;
@@ -23,7 +24,12 @@ type SkillsState = {
 export default function Home() {
 
   const [skills, setSkills] = useState<SkillsState>({ Frontend: [], Backend: [], Database: [], DevOps: [], Other: [], });
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+  
   useEffect(() => {
 
     async function fetchSkills() {
@@ -37,19 +43,20 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col sm:flex-row">
+    <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row">
       <Head>
         <title>Mostafizur Rahman - Portfolio</title>
       </Head>
+      {/* nav bar section */}
 
-      <div className="w-full sm:w-1/3 bg-gray-900 p-8 flex flex-col justify-between sticky top-0 h-screen">
-        <div className="p-8 flex-grow">
+      <div className="w-full lg:w-1/3 bg-gray-900 p-8 flex flex-col justify-between sticky top-0 h-screen">
+        <div style={{ minWidth: '320px' }} className="p-8 flex-grow">
           <div className="max-w-xs mx-auto flex flex-col h-full justify-between">
 
-            <div>
+            <div style={{ minWidth: '256px' }}>
               <h1 className="text-3xl font-bold mb-4 text-white">Mostafizur Rahman</h1>
               <h2 className="text-xl typewriter mb-4">Full Stack Developer</h2>
-              <p className="text-gray-400 mb-8">I craft creative seamless web experiences that bridge technology and user needs</p>
+              <p className="text-gray-300 mb-8"> I create seamless Web Experiences Where Technology Meets User Needs</p>
               <div className="space-y-4">
                 <div className="space-y-4">
                   <a href="#about-section" className="block text-gray-300 hover:text-white cursor-pointer">ABOUT</a>
@@ -60,6 +67,7 @@ export default function Home() {
               </div>
             </div>
 
+{/* nav link  */}
             <div className="mt-24">
               <div className="flex justify-start items-center space-x-4">
                 <a href="https://www.linkedin.com/in/mostafizur-rahman-35568045" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
@@ -73,8 +81,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* scrolling content */}
+
       <ScrollableContent>
-        <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+        <div style={{ paddingLeft: '5%', paddingRight: '5%' }}>
 
           <div id="about-section" className="mb-8">
             <button
@@ -119,7 +130,7 @@ export default function Home() {
 
           <div id="skills-section" className="mb-8">
             <button
-              className="animate-sideways mb-6 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl" // Added text-xl for 20px text size
+              className="animate-sideways mb-6 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl"
             >
               SKILLS
             </button>
@@ -130,6 +141,7 @@ export default function Home() {
 
         </div>
       </ScrollableContent>
+
 
     </div>
   );
