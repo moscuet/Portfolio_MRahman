@@ -1,11 +1,41 @@
+'use client'
+
 import '../styles/home.css'
 import Link from 'next/link';
 import Head from 'next/head';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import ScrollableContent from '@/components/ScroolBar';
 import ProjectCard from '@/components/ProjectCard';
+import { useEffect, useState } from 'react';
+import SkillsList from '@/components/SkillsList';
+type Skill = {
+  id: number;
+  name: string;
+  proficiencyLevel: number;
+};
+
+type SkillsCategory = 'Frontend' | 'Backend' | 'Database' | 'DevOps' | 'Other';
+
+type SkillsState = {
+  [key in SkillsCategory]: Skill[];
+};
 
 export default function Home() {
+
+  const [skills, setSkills] = useState<SkillsState>({ Frontend: [], Backend: [], Database: [], DevOps: [], Other: [], });
+
+  useEffect(() => {
+  
+    async function fetchSkills() {
+      const response = await fetch('/api/skills');
+      const data = await response.json();
+      setSkills(data.skills);
+    }
+
+    fetchSkills().catch(console.error);
+  }, []);
+
+
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col sm:flex-row">
       <Head>
@@ -18,7 +48,7 @@ export default function Home() {
 
             <div>
               <h1 className="text-3xl font-bold mb-4 text-white">Mostafizur Rahman</h1>
-              <h2 className="text-xl text-gray-300 mb-4">Full Stack Developer</h2>
+              <h2 className="text-xl typewriter mb-4">Full Stack Developer</h2>
               <p className="text-gray-400 mb-8">I craft creative seamless web experiences that bridge technology and user needs</p>
               <div className="space-y-4">
                 <div className="space-y-4">
@@ -43,41 +73,41 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <ScrollableContent>
         <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+
           <div id="about-section" className="mb-8">
             <button
-              className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden animate-sideways"
-            >
+  className=" animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl animate-button"
+  >
               ABOUT
             </button>
-            <p className="mt-4 text-l font-serif">
-              From civil engineering to coding: I've redefined my career as a full-stack web developer. I am proficient in a comprehensive range of technologies across front-end and back-end development, database management, testing, and DevOps.             </p>
-            <p className="mt-4 text-l font-serif">
-              My fascination with coding took root during a university course where I worked with the Fortran language. It wasn't until 2019, however, that I fully committed to pursuing a career in this field.             </p>
-            <p className="mt-4 text-l font-serif">
-              With three years of experience in web development, I've become adept at creating robust software solutions through my work with Integrify and Ontime-Research. Away from the keyboard, I enjoy keeping up with the latest tech trends, exploring cinema, traveling, and finding tranquility in swimming.
-            </p>
+            <div className="pl-4">
+              <p className="mt-4 text-l font-serif">
+                From civil engineering to coding: I've redefined my career as a full-stack web developer. I am proficient in a comprehensive range of technologies across front-end and back-end development, database management, testing, and DevOps.
+              </p>
+              <p className="mt-4 text-l font-serif">
+                My fascination with coding took root during a university course where I worked with the Fortran language. It wasn't until 2019, however, that I fully committed to pursuing a career in this field.
+              </p>
+              <p className="mt-4 text-l font-serif">
+                With three years of experience in web development, I've become adept at creating robust software solutions through my work with Integrify and Ontime-Research. Away from the keyboard, I enjoy keeping up with the latest tech trends, exploring cinema, traveling, and finding tranquility in swimming.
+              </p>
+            </div>
           </div>
-
-
 
           <div id="projects-section" className="mb-8">
             <button
-              className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden animate-sideways"
+              className="animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl"
             >
               PROJECTS
             </button>
-
-            <div>
+            <div className="pl-4">
               <ProjectCard
                 id='1'
                 imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
                 title="My Awesome Project"
                 description="This is a great project that does amazing things."
               />
-
               <ProjectCard
                 id='2'
                 imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
@@ -89,14 +119,18 @@ export default function Home() {
 
           <div id="skills-section" className="mb-8">
             <button
-              className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden animate-sideways"
+              className="animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl" // Added text-xl for 20px text size
             >
-              Skills
+              SKILLS
             </button>
+            <div className="pl-4">
+              <SkillsList skills={skills} />
+            </div>
           </div>
 
         </div>
       </ScrollableContent>
+
     </div>
   );
 }

@@ -15,7 +15,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description, id }) => {
     return (
         <Link href={'/'} passHref> {/* Wrap the Box with Link and pass href */}
-            <a style={{ textDecoration: 'none' }}> {/* Use an anchor tag to make it clickable */}
+            <a style={{ textDecoration: 'none' }}> {/* Use an anchor tag to make it clickable */} 
                 <Box
                     sx={{
                         p: 2,
