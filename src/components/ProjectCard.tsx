@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,8 +16,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description, id }) => {
     return (
-        <Link href={'/'} passHref> {/* Wrap the Box with Link and pass href */}
-            <a style={{ textDecoration: 'none' }}> {/* Use an anchor tag to make it clickable */}
+        <Link href={'/'} >
                 <Box
                     sx={{
                         p: 2,
@@ -60,7 +61,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description,
                     </Box>
 
                 </Box>
-            </a>
         </Link>
     );
 };

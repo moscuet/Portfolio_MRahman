@@ -1,0 +1,51 @@
+{
+    "skills": {
+      "Frontend": [
+        { "id": 1, "name": "Accessibility", "proficiencyLevel": 4 },
+        { "id": 2, "name": "Ant Design", "proficiencyLevel": 3 },
+        { "id": 3, "name": "Bootstrap", "proficiencyLevel": 4 },
+        { "id": 4, "name": "Gatsby.js", "proficiencyLevel": 3 },
+        { "id": 5, "name": "GraphQL", "proficiencyLevel": 3 },
+        { "id": 6, "name": "JavaScript", "proficiencyLevel": 5 },
+        { "id": 7, "name": "Material-UI", "proficiencyLevel": 4 },
+        { "id": 8, "name": "Next.js", "proficiencyLevel": 4 },
+        { "id": 9, "name": "NPM", "proficiencyLevel": 5 },
+        { "id": 10, "name": "React.js", "proficiencyLevel": 5 },
+        { "id": 11, "name": "Redux", "proficiencyLevel": 4 },
+        { "id": 12, "name": "SCSS", "proficiencyLevel": 4 },
+        { "id": 13, "name": "TypeScript", "proficiencyLevel": 4 },
+        { "id": 14, "name": "TanStack Query", "proficiencyLevel": 3 },
+        { "id": 15, "name": "SEO", "proficiencyLevel": 3 }
+      ],
+      "Backend": [
+        { "id": 16, "name": "Express.js", "proficiencyLevel": 4 },
+        { "id": 17, "name": "Node.js", "proficiencyLevel": 5 },
+        { "id": 18, "name": "REST API", "proficiencyLevel": 4 }
+      ],
+      "Database": [
+        { "id": 19, "name": "MariaDB", "proficiencyLevel": 3 },
+        { "id": 20, "name": "MongoDB", "proficiencyLevel": 4 },
+        { "id": 21, "name": "Mongoose", "proficiencyLevel": 3 },
+        { "id": 22, "name": "MySQL", "proficiencyLevel": 4 },
+        { "id": 23, "name": "PostgreSQL", "proficiencyLevel": 4 }
+      ],
+      "DevOps": [
+        { "id": 24, "name": "CI/CD", "proficiencyLevel": 4 },
+        { "id": 25, "name": "Docker", "proficiencyLevel": 3 },
+        { "id": 26, "name": "Github Pages", "proficiencyLevel": 3 },
+        { "id": 27, "name": "Heroku", "proficiencyLevel": 3 },
+        { "id": 28, "name": "Jenkins", "proficiencyLevel": 3 },
+        { "id": 29, "name": "Kubernetes", "proficiencyLevel": 3 },
+        { "id": 30, "name": "Netlify", "proficiencyLevel": 3 }
+      ],
+      "Other": [
+        { "id": 31, "name": "Agile Development", "proficiencyLevel": 4 },
+        { "id": 32, "name": "Confluence", "proficiencyLevel": 3 },
+        { "id": 33, "name": "Contentful", "proficiencyLevel": 3 },
+        { "id": 34, "name": "Figma", "proficiencyLevel": 3 },
+        { "id": 35, "name": "GitHub", "proficiencyLevel": 4 },
+        { "id": 36, "name": "Jira", "proficiencyLevel": 4 }
+      ]
+    }
+  }
+  
