@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Pragmatic Intelligence Consulting Website",
+            "summary": "Project One Summary",
+            "details": "Detailed description of Project One.",
+            "images": ["pragmatic_Intelligence_consulting_Website_01.png", "pragmatic_Intelligence_consulting_Website_02", "image1c.jpg"],
+            "tech_stack": ["Custom LMS", "Cloud Services", "Analytics"]
+        },
+        {
+            "id": 2,
+            "title": "Borrow Story",
+            "summary": "Library App to borrow books",
+            "details": "Detailed description of Project Two.",
+            "images": ["image2a.jpg", "image2b.jpg"],
+            "tech_stack": ["VR Training System", "3D Modelling Software"]
+        },
+        {
+            "id": 3,
+            "title": "Executive Leadership Workshop",
+            "summary": "Project Three Summary",
+            "details": "Detailed description of Project Three.",
+            "images": ["image3a.jpg", "image3b.jpg", "image3c.jpg", "image3d.jpg"],
+            "tech_stack": ["Interactive Workshop Tools", "Presentation Software"]
+        },
+        {
+            "id": 4,
+            "title": "Team Efficiency Program",
+            "summary": "Project Four Summary",
+            "details": "Detailed description of Project Four.",
+            "images": ["image4a.jpg"],
+            "tech_stack": ["Agile Training", "Project Management Tools"]
+        },
+        {
+            "id": 5,
+            "title": "Sales Enablement Toolkit",
+            "summary": "Project Five Summary",
+            "details": "Detailed description of Project Five.",
+            "images": ["image5a.jpg", "image5b.jpg"],
+            "tech_stack": ["CRM Platform", "Sales Analytics", "Automation Tools"]
+        }
+    ]
+}
