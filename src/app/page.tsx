@@ -10,6 +10,7 @@ import SkillsList from '@/components/SkillsList';
 import Main from '@/components/Main';
 
 import '../styles/navBar.css'
+import Footer from '@/components/Footer';
 
 
 type Skill = {
@@ -33,7 +34,6 @@ export default function Home() {
         Other: [],
     });
 
-    const [isNavOpen, setIsNavOpen] = useState(false);
 
     useEffect(() => {
         async function fetchSkills() {
@@ -45,73 +45,50 @@ export default function Home() {
         fetchSkills().catch(console.error);
     }, []);
 
-    const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
 
-    const mobileNavbar = isNavOpen && (
-        <div className="fixed inset-y-0 right-0 z-10 bg-gray-800 p-8 flex flex-col w-[150px]">
-            <button onClick={toggleNav} className="text-white self-end">
-                <FaTimes size={24} />
-            </button>
-            <nav className="mt-4 flex flex-col">
-                <a href="#about-section" className=" animate-character text-gray-300 hover:text-white mb-2">ABOUT</a>
-                <a href="#projects-section" className="text-gray-300 hover:text-white mb-2">PROJECTS</a>
-                <a href="#skills-section" className="text-gray-300 hover:text-white mb-2">SKILLS</a>
-            </nav>
-        </div>
-    );
 
-    
     return (
-        <div className="min-h-screen flex flex-col bg-gray-200">
+        <div className="flex flex-col bg-gray-200">
             <Head>
                 <title>Mostafizur Rahman - Portfolio</title>
             </Head>
 
-            {/* Top Navbar */}
-            <div style={{ height: '100px' }} className="flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-800">
-  <div style={{ height: '100%' }} className="flex items-center">
-    {/* Inline style to ensure the logo fills the height of the navbar */}
-    <img src={'/assets/brand_logo.png'} alt="Logo" style={{ height: '100%' }} />
-  </div>
-
-  {/* Navigation Links and Hamburger Menu on the right */}
-  <div className="flex items-center">
-    {/* Hidden navigation links on smaller screens */}
-    <nav className="hidden lg:flex animate-sideways">
-      <a href="#about-section" className="nav-link">ABOUT</a>
-      <a href="#projects-section" className="nav-link">PROJECTS</a>
-      <a href="#skills-section" className="nav-link">SKILLS</a>
-    </nav>
-
-    {/* Hamburger Menu shown on smaller screens */}
-    <Button onClick={toggleNav} className="lg:hidden ml-4">
-      <FaBars size={24} />
-    </Button>
-  </div>
-</div>
-
-
-
-
-            {mobileNavbar}
-
-            {/* Landing Page */}
-            <div className="flex-grow flex flex-col justify-center items-center p-4">
-                <h1 style={{ marginBottom: 10 }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center">
+            <div className=" min-h-screen flex-grow flex flex-col justify-center items-center p-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
                     Hi, I am Rahman
                 </h1>
-                <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4">
+                <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
                     A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
                 </p>
-                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-4 py-2 px-4 rounded">
-  <span className="animated-light-gradient-text">More about me</span>
-</Button>
+                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
+                    <span className="animated-light-gradient-text">More about me</span>
+                </Button>
             </div>
-
+            
             {/* Main Content */}
-            {/* Content would be here */}
+            <Main>
+                <div id="projects-section" className="mb-8">
+                    <button
+                        className="animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl"
+                    >
+                        PROJECTS
+                    </button>
+                    <div className="pl-2">
+                        <ProjectCard
+                            id='1'
+                            imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
+                            title="My Awesome Project"
+                            description="This is a great project that does amazing things."
+                        />
+                        <ProjectCard
+                            id='2'
+                            imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
+                            title="My Awesome Project"
+                            description="This is a great project that does amazing things."
+                        />
+                    </div>
+                </div>
+            </Main>
 
         </div>
     );

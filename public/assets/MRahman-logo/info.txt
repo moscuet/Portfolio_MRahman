@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: LinguisticsPro-Regular
+font link: https://github.com/StefanPeev/Linguistics-Pro
+font author: Local Fonts
+font author site: https://localfonts.eu/
+Slogan Font: Aleo-Light.otf
+
+icon designer: Darrin Loeliger
+icon designer link: /MrMuma
+        
+{"bg":"#8668ED","font":"#EAE6FE","slogan":"#fefaff","icon":"#EAE6FE"}
+      
