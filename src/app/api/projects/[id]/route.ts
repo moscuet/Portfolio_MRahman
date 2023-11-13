@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import {projects }from '../../../../../data/projects.json';
+import projectsData from '../../../../../data/projects.json';
 
 
 export function GET(request: Request, context: any) {
     const id = parseInt(context.params.id);
-
+    const projects = projectsData.projects;
     const project = projects.find((project) => project.id === id);
 
     if (project) {

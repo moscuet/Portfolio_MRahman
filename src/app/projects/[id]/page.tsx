@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-
 import BusinessIntelligence from '../../../components/projects/business-intelligence/Project'
 import CookingRecipes from '../../../components/projects/cooking/page'
 
