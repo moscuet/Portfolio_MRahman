@@ -2,15 +2,17 @@
 import Head from 'next/head';
 import { FaLinkedin, FaGithub, FaTimes, FaBars } from 'react-icons/fa';
 import Image from 'next/image';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 import ProjectCard from '@/components/ProjectCard';
 import SkillsList from '@/components/SkillsList';
 import Main from '@/components/Main';
 
-import '../styles/navBar.css'
+
+
 import Footer from '@/components/Footer';
+import FollowDownAnimation from '@/components/FollowDownAnimation';
 
 
 type Skill = {
@@ -48,12 +50,8 @@ export default function Home() {
 
 
     return (
-        <div className="flex flex-col bg-gray-200">
-            <Head>
-                <title>Mostafizur Rahman - Portfolio</title>
-            </Head>
-
-            <div className=" min-h-screen flex-grow flex flex-col justify-center items-center p-4">
+        <>
+            <div className="min-h-screen flex-grow flex flex-col justify-center items-center p-4 relative">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
                     Hi, I am Rahman
                 </h1>
@@ -63,36 +61,15 @@ export default function Home() {
                 <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
                     <span className="animated-light-gradient-text">More about me</span>
                 </Button>
-            </div>
-            
-            {/* Main Content */}
-            <Main>
-                <div id="projects-section" className="mb-8">
-                    <button
-                        className="animate-sideways mb-4 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:bg-opacity-20 hover:text-white py-2 px-4 rounded-full transition duration-300 ease-in-out relative overflow-hidden text-xl"
-                    >
-                        PROJECTS
-                    </button>
-                    <div className="pl-2">
-                        <ProjectCard
-                            id='1'
-                            imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
-                            title="My Awesome Project"
-                            description="This is a great project that does amazing things."
-                        />
-                        <ProjectCard
-                            id='2'
-                            imageUrl="https://www.imgworlds.com/_next/static/media/zombie.62426ba0.png"
-                            title="My Awesome Project"
-                            description="This is a great project that does amazing things."
-                        />
-                    </div>
+                <div style={{ position: 'absolute', bottom: 0, width: '100%', left: '50%' }}>
+                    <FollowDownAnimation />
                 </div>
-            </Main>
-
-        </div>
+            </div>
+            <Main />
+        </>
     );
 }
+
 
 
 

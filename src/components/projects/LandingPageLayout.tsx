@@ -1,0 +1,41 @@
+import React from 'react';
+import { Grid } from '@mui/material';
+import ImageSlider from '@/components/ImageSlider';
+import FollowDownAnimation from '../FollowDownAnimation';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Link from 'next/link';
+
+const ProjectBusinessIntellegence = ({ title, images, url }: { title: string, images: string[], url: string }) => {
+    return (
+        <Grid container className="justify-center " style={{ border:'1px solid red'}}>
+            <Grid item className="text-center mb-5">
+                <h1 className="text-gray-800 font-bold text-xl">{title}</h1>
+            </Grid>
+
+            <Grid item className="w-full flex justify-center mb-5">
+                <div className="w-1/2">
+                    <ImageSlider images={images} url={url} />
+                </div>
+            </Grid>
+            <FollowDownAnimation />
+        </Grid>
+    );
+};
+
+
+/*
+<div className=" min-h-screen flex-grow flex flex-col justify-center items-center p-4">
+<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
+    Hi, I am Rahman
+</h1>
+<p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
+    A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
+</p>
+<Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py- px-4 rounded">
+    <span className="animated-light-gradient-text">More about me</span>
+</Button>
+</div>     
+<FollowDownAnimation/>
+
+*/
+export default ProjectBusinessIntellegence;

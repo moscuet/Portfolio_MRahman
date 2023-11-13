@@ -47,7 +47,7 @@
     white-space: nowrap;
     letter-spacing: .15em;
     animation: typing 20s steps(40, end) infinite;
-    border-right: none; /* Removes the cursor */
+    border-right: none; 
   }
   
 
@@ -66,7 +66,6 @@
   }
   
   .lightplay-text {
-    /* Gradient with white and a lighter shade of the background color */
     background: linear-gradient(
       90deg, 
       rgba(255, 255, 255, 1) 0%, 
@@ -76,36 +75,70 @@
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* Fallback for non-WebKit browsers */
-    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    color: transparent; 
+    -webkit-text-fill-color: transparent;
     animation: lightplay 3s ease-in-out infinite;
   }
   
   
+  /* indicating scroll down */
+  .scroll-downs {
+    transform: translateX(-50%);
+    text-align: center;
+  }
   
-
-  /* animated cursor */
-
-  @keyframes pulse {
+  .mousey {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    width: 25px;
+    height: 45px;
+    position: relative;
+    top: 0;
+    border: 2px solid #6366F1; 
+  }
+  
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #6366F1;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes scroll {
     0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
+      top: 8px;
+      opacity: 1;
     }
     100% {
-      transform: scale(1);
+      top: 25px;
+      opacity: 0;
     }
   }
   
-  a:hover {
-    animation: pulse 1s infinite;
-  }
-  
+  /* Default bottom margin for smaller screens */
+.follow-down-animation-container {
+  margin-bottom: 150px;
+}
 
-  .animated-cursor:hover {
-    animation: pulse 1s infinite;
+/* For screens 410px or wider */
+@media (min-width: 410px) {
+  .follow-down-animation-container {
+    margin-bottom: 140px;
   }
-  
+}
 
-  
+/* For screens 730px or wider */
+@media (min-width: 730px) {
+  .follow-down-animation-container {
+    margin-bottom: 120px;
+  }
+}

@@ -1,39 +1,21 @@
-import { Metadata } from 'next';
-import React from 'react'
-import getProject from '../../../../lib/getProject';
+import { useRouter } from 'next/router';
 
+import BusinessIntelligence from '../../../components/projects/business-intelligence/Project'
+import CookingRecipes from '../../../components/projects/cooking/page'
 
-export const metadata: Metadata = {
-    title: 'Mostafizur Rahman - Project',
-  };
+const projectComponents = {
+  'business-intelligence': BusinessIntelligence,
+  'cooking-recipe': CookingRecipes,
+};
+type ProjectComponentKey = 'business-intelligence' | 'cooking-recipe';
 
-  
-export default async function page({ params }: { params: { id: string } }) {
-    
-    const project = await getProject(params.id)
-    console.log(project)
+export default function ProjectPage({ params }: { params: { id: string } }) {
 
-    if (!project) {
-      return <div>Loading...</div>;
-    }
+  const ProjectComponent = projectComponents[params.id as ProjectComponentKey];
 
-    return (
-      <div>
-        <h1>{project.title}</h1>
-        <p>{project.summary}</p>
-        <div className="image-slider">
-          {project.images.map((image:string, index:number) => (
-            <img key={index} src={`/assets/images/${image}`} alt={`Project image ${index}`} />
-          ))}
-        </div>
-        <p>{project.details}</p>
-        <div className="tech-stack">
-        {project.tech_stack.map((tech:string, index:number) => (
-          <span key={index} className="tech-button">
-            {tech}
-          </span>
-        ))}
-      </div>
-      </div>
-    );
+  if (!ProjectComponent) {
+    return <div className='bg-gray-200' style={{ color: 'black', paddingTop: '100px' }}>Project not found.</div>;
   }
+
+  return <div className="text-gray-800 " style={{  height: 'calc(100vh - 120px)', paddingTop: '120px', paddingLeft: '16px' , border:'1px solid green'}}> <ProjectComponent /> </div>;
+}
