@@ -1,13 +1,10 @@
 import { Button } from '@mui/material';
-import Head from 'next/head';
 import React from 'react';
 
 export default function page() {
   return (
     <div className="flex flex-col bg-gray-200">
-      <Head>
-        <title>About - Mostafizur Rahman</title>
-      </Head>
+
 
       <div className=" min-h-screen flex-grow flex flex-col justify-center items-center p-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
