@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,59 +6,57 @@ import Box from '@mui/material/Box';
 import Link from 'next/link';
 
 interface ProjectCardProps {
-    id?: string;
+    id: string;
     imageUrl: string;
     title: string;
-    description: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, title, description, id }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
     return (
-        <Link href={'/'} >
-                <Box
-                    sx={{
-                        p: 2,
-                        display: 'flex',
-                        flexDirection: ['column', 'column', 'row'],
-                        alignItems: 'center',
-                        width: '100%',
-                        borderRadius: '4px',
-                        overflow: 'hidden',
-                        transition: 'background-color 0.3s ease',
-                        '&:hover': {
-                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                        },
-                        cursor: 'pointer',
-                    }}
-                >
-                    <Card sx={{ width: ['100%', '100%', '50%'], mb: 1, p: 2 }}>
-                        <CardMedia
-                            component="img"
-                            sx={{ height: 'auto', width: '100%' }}
-                            image={imageUrl}
+        <Link href={`/projects/${id}`} passHref>
+            <Box
+                sx={{
+                    cursor: 'pointer',
+                    '&:hover': {
+                        transform: 'scale(1.02)',
+                        transition: 'transform 0.3s ease-in-out',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    },
+                }}
+            >
+                <Card sx={{ width: '100%', mb: 1 }}>
+                    <CardMedia
+                        component="div"
+                        sx={{ 
+                            position: 'relative',
+                            height: 'auto',
+                            width: '100%',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={imageUrl}
                             alt={title}
+                            style={{ width: '100%', display: 'block' }}
                         />
-                    </Card>
-
-                    <Box sx={{ width: ['100%', '100%', '50%'], ml: [0, 0, 2] }}>
-                        <Typography component="div" variant="h5" sx={{ color: 'white' }}>
-                            {title}
-                        </Typography>
                         <Typography
-                            variant="subtitle1"
-                            sx={{
-                                color: '#d1d1d1',
-                                whiteSpace: 'normal',
-                                overflow: 'hidden',
-                                wordBreak: 'break-word',
-                                mt: 1
+                            component="div"
+                            variant="h5"
+                            sx={{ 
+                                position: 'absolute',
+                                bottom: 20,
+                                left: 20,
+                                color: 'white',
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                padding: '5px 10px',
+                                borderRadius: '4px',
                             }}
                         >
-                            {description}
+                            {title}
                         </Typography>
-                    </Box>
-
-                </Box>
+                    </CardMedia>
+                </Card>
+            </Box>
         </Link>
     );
 };
