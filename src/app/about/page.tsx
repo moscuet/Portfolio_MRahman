@@ -1,28 +1,30 @@
-import { Button } from '@mui/material';
-import React from 'react';
+'use client'
 
-export default function page() {
-  return (
-    <div className="flex flex-col bg-gray-200">
+import { Button, Grid } from '@mui/material';
+import Main from '@/components/Main';
+import FollowDownAnimation from '@/components/FollowDownAnimation';
 
 
-      <div className=" min-h-screen flex-grow flex flex-col justify-center items-center p-4">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
-          Hi, I am Rahman
-        </h1>
-        <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
-          A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
-        </p>
-        <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
-          <span className="animated-light-gradient-text">More about me</span>
-        </Button>
-      </div>
+export default function Home() {
 
-      <div className="scroll-downs">
-        <div className="mousey">
-          <div className="scroller"></div>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <div className="min-h-screen flex-grow flex flex-col justify-center items-center p-4 relative">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
+                    Hi, I am Rahman
+                </h1>
+                <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
+                    A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
+                </p>
+                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
+                    <span className="animated-light-gradient-text">More about me</span>
+                </Button>
+                <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
+                    <FollowDownAnimation />
+                </div>
+            </div>
+            <Main />
+        </>
+    );
 }
+
