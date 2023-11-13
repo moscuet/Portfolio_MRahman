@@ -4,7 +4,7 @@ import './globals.css'
 import NavBar from '@/components/NavBar';
 import SocialSideBar from '@/components/SocialSideBar';
 import Footer from '@/components/Footer';
-import { Head } from 'next/document';
+import Head from 'next/head';
 
 import '../styles/navBar.css'
 import '../styles/home.css'
