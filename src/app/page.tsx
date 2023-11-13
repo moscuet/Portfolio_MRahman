@@ -61,7 +61,7 @@ export default function Home() {
                 <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
                     <span className="animated-light-gradient-text">More about me</span>
                 </Button>
-                <div style={{ position: 'absolute', bottom: 0, width: '100%', left: '50%' }}>
+                <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />
                 </div>
             </div>

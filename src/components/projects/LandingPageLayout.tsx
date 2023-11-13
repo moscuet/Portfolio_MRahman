@@ -7,17 +7,19 @@ import Link from 'next/link';
 
 const ProjectBusinessIntellegence = ({ title, images, url }: { title: string, images: string[], url: string }) => {
     return (
-        <Grid container className="justify-center " style={{ border:'1px solid red'}}>
-            <Grid item className="text-center mb-5">
+        <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)' }}>
+            <Grid item className="text-center mb-3">
                 <h1 className="text-gray-800 font-bold text-xl">{title}</h1>
             </Grid>
 
-            <Grid item className="w-full flex justify-center mb-5">
-                <div className="w-1/2">
+<Grid item className="w-full flex justify-center mb-5">
+                <div style={{ maxHeight: 'calc(100vh - 250px)', maxWidth: 'calc(100vw - 150px)', overflow: 'hidden' }}>
                     <ImageSlider images={images} url={url} />
                 </div>
             </Grid>
-            <FollowDownAnimation />
+            <Grid item xs={12} style={{ position: 'absolute', bottom: 0, width: '100%', left: '50%', transform: 'translateX(-50%)' }}>
+                <FollowDownAnimation />
+            </Grid>
         </Grid>
     );
 };

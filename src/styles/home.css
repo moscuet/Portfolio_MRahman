@@ -83,7 +83,6 @@
   
   /* indicating scroll down */
   .scroll-downs {
-    transform: translateX(-50%);
     text-align: center;
   }
   
