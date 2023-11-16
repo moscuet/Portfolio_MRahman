@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Grid } from '@mui/material';
 import ImageSlider from '@/components/ImageSlider';
@@ -7,17 +8,18 @@ import Link from 'next/link';
 
 const ProjectBusinessIntellegence = ({ title, images, url }: { title: string, images: string[], url: string }) => {
     return (
-        <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)' }}>
+        <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)', display: 'flex'}}>
             <Grid item className="text-center mb-3">
                 <h1 className="text-gray-800 font-bold text-xl">{title}</h1>
             </Grid>
 
-<Grid item className="w-full flex justify-center mb-5">
+            <Grid style={{ display: 'inline-flex', justifyContent: 'center' }} className="mb-5">
                 <div style={{ maxHeight: 'calc(100vh - 250px)', maxWidth: 'calc(100vw - 150px)', overflow: 'hidden' }}>
                     <ImageSlider images={images} url={url} />
                 </div>
             </Grid>
-            <Grid item xs={12} style={{ position: 'absolute', bottom: 0, width: '100%', left: '50%', transform: 'translateX(-50%)' }}>
+
+            <Grid item style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)' }}>
                 <FollowDownAnimation />
             </Grid>
         </Grid>

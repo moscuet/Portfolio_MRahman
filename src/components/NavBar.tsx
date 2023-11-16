@@ -24,7 +24,7 @@ export default function NavBar() {
     }, []);
     return (
         <>
-            <div style={{ height: '100px' }} className="fixed top-0 left-0 right-0 z-10 flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-800">
+            <div style={{ height: '100px' ,  zIndex: 12}} className="fixed top-0 left-0 right-0 z-10 flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-800">
                 <div className="flex items-center" style={{ height: '100%' }}>
                     <Link href="/" passHref>
                         <Image

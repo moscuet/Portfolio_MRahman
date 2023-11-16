@@ -47,7 +47,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
                                 bottom: 20,
                                 left: 20,
                                 color: 'white',
-                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
                                 padding: '5px 10px',
                                 borderRadius: '4px',
                             }}

@@ -29,13 +29,13 @@ const ImageSlider = ({ images, url }: { images: string[], url: string }) => {
     }
 
     return (
-        <Box style={{ height: '100%', width: '100%', overflow: 'hidden' }} position="relative">
+        <Box id = 'project-slider-container' style={{ height: '100%', overflow: 'hidden' }} position="relative">
             <ArrowBackIosIcon
-                sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 10, cursor: 'pointer' }}
+                sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 11, cursor: 'pointer' }}
                 onClick={prevSlide}
             />
             <ArrowForwardIosIcon
-                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 10, cursor: 'pointer' }}
+                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer' }}
                 onClick={nextSlide}
             />
             {images.map((image, index) => (
@@ -44,7 +44,7 @@ const ImageSlider = ({ images, url }: { images: string[], url: string }) => {
                         <img src={image} alt={`Slide ${index}`} style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
                     </Paper>
                     <Link href={url} passHref>
-                        <div onClick={handleDemoClick} className="absolute bottom-2 right-2 z-20 text-indigo-500 hover:text-blue-800 font-bold no-underline inline-flex items-center cursor-pointer">
+                        <div onClick={handleDemoClick} className="absolute bottom-2 right-2 z-10 text-indigo-500 hover:text-blue-800 font-bold no-underline inline-flex items-center cursor-pointer">
                             Live Demo
                             <ArrowForwardIcon style={{ transform: 'rotate(-45deg)' }} />
                         </div>

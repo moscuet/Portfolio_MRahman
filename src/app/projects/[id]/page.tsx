@@ -15,5 +15,5 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     return <div className='bg-gray-200' style={{ color: 'black', paddingTop: '100px' }}>Project not found.</div>;
   }
 
-  return <div className="text-gray-800 " style={{  height: 'calc(100vh - 120px)', paddingTop: '120px', paddingLeft: '16px'}}> <ProjectComponent /> </div>;
+  return <div className="text-gray-800 " style={{ paddingTop: '120px', paddingLeft: '16px'}}> <ProjectComponent /> </div>;
 }

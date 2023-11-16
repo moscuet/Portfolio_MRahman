@@ -1,5 +1,5 @@
 import { Button, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 
 interface MainProps {
@@ -7,6 +7,19 @@ interface MainProps {
 }
 
 const Main = () => {
+
+  const [showAll, setShowAll] = useState(false);
+
+  const projects = [
+    { id: 'business-intelligence', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
+    { id: 'cooking-recipe', imageUrl: "/assets/images/business_Intelligence_02.png", title: "My Awesome Project" },
+    { id: 'business-intelligence2', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
+    { id: 'business-intelligence3', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
+    { id: 'business-intelligence4', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
+  ];
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+
   return (
     <div className="w-full overflow-y-auto">
       <div id="projects-section"
@@ -23,43 +36,24 @@ const Main = () => {
         </Grid>
 
         <Grid container spacing={2} justifyContent="center" style={{ padding: '0 20px' }}>
-          <Grid item xs={12} sm={6} md={6} lg={6}>
-            <ProjectCard
-              id='business-intelligence'
-              imageUrl="/assets/images/business_Intelligence_01.png"
-              title="My Awesome Project"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6}>
-            <ProjectCard
-              id='cooking-recipe'
-              imageUrl="/assets/images/business_Intelligence_02.png"
-              title="My Awesome Project"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6}>
-            <ProjectCard
-              id='1'
-              imageUrl="/assets/images/business_Intelligence_03.png"
-              title="My Awesome Project"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6}>
-            <ProjectCard
-              id='1'
-              imageUrl="/assets/images/business_Intelligence_03.png"
-              title="My Awesome Project"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6}>
-            <ProjectCard
-              id='1'
-              imageUrl="/assets/images/business_Intelligence_03.png"
-              title="My Awesome Project"
-            />
-          </Grid>
-        </Grid>
+          {displayedProjects.map(project => (
+            <Grid key={project.id} item xs={12} sm={6} md={6} lg={6}>
+              <ProjectCard
+                id={project.id}
+                imageUrl={project.imageUrl}
+                title={project.title}
+              />
+            </Grid>
+          ))}
 
+          {!showAll && projects.length > 4 && (
+            <Grid item xs={12} className="text-center">
+              <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded" onClick={() => setShowAll(true)}>
+                <span className="animated-light-gradient-text">   Show All Projects</span>
+              </Button>
+            </Grid>
+          )}
+        </Grid>
       </div>
     </div>
   );
