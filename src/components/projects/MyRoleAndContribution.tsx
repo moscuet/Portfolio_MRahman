@@ -10,7 +10,7 @@ const textItems = [
 
 const MyRoleAndContributions = () => {
     return (
-        <Box className="my-4 p-2 border border-indigo-500 bg-gray-100 rounded-lg shadow-md"> {/* Added border-radius and shadow */}
+        <Box className="my-4 px-3 py-10  bg-gray-100 rounded-lg shadow-md">
             <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={12} md={4} className="flex items-center">
                     <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl text-left">

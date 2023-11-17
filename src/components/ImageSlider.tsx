@@ -1,13 +1,11 @@
-'use client'
 import React, { useState } from 'react';
-import { Paper, Button, Box } from '@mui/material';
+import { Paper, Box } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { CropLandscapeRounded } from '@mui/icons-material';
 import Link from 'next/link';
 
-const ImageSlider = ({ images, url }: { images: string[], url: string }) => {
+const ImageSlider = ({ images, url, projectName }: { images: string[], url: string, projectName: string }) => {
     const [current, setCurrent] = useState(0);
     const length = images.length;
 
@@ -29,7 +27,7 @@ const ImageSlider = ({ images, url }: { images: string[], url: string }) => {
     }
 
     return (
-        <Box id = 'project-slider-container' style={{ height: '100%', overflow: 'hidden' }} position="relative">
+        <Box id='project-slider-container' style={{ height: '100%', overflow: 'hidden' }} position="relative">
             <ArrowBackIosIcon
                 sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 11, cursor: 'pointer' }}
                 onClick={prevSlide}
@@ -43,16 +41,17 @@ const ImageSlider = ({ images, url }: { images: string[], url: string }) => {
                     <Paper elevation={3} sx={{ padding: 2, textAlign: 'center', height: '100%' }}>
                         <img src={image} alt={`Slide ${index}`} style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
                     </Paper>
+                    <div className="absolute bottom-2 left-2 z-10 text-indigo-500 font-bold">
+                        {projectName} {/* Display project name */}
+                    </div>
                     <Link href={url} passHref>
                         <div onClick={handleDemoClick} className="absolute bottom-2 right-2 z-10 text-indigo-500 hover:text-blue-800 font-bold no-underline inline-flex items-center cursor-pointer">
                             Live Demo
                             <ArrowForwardIcon style={{ transform: 'rotate(-45deg)' }} />
                         </div>
                     </Link>
-
                 </div>
             ))}
-
         </Box>
     );
 };

@@ -9,13 +9,9 @@ import Link from 'next/link';
 const ProjectBusinessIntellegence = ({ title, images, url }: { title: string, images: string[], url: string }) => {
     return (
         <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)', display: 'flex'}}>
-            <Grid item className="text-center mb-3">
-                <h1 className="text-gray-800 font-bold text-xl">{title}</h1>
-            </Grid>
-
             <Grid style={{ display: 'inline-flex', justifyContent: 'center' }} className="mb-5">
                 <div style={{ maxHeight: 'calc(100vh - 250px)', maxWidth: 'calc(100vw - 150px)', overflow: 'hidden' }}>
-                    <ImageSlider images={images} url={url} />
+                    <ImageSlider images={images} url={url} projectName={title} />
                 </div>
             </Grid>
 
