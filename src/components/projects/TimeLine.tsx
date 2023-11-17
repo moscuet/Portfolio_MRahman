@@ -14,6 +14,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/FlightTakeoff';
 import TimelineIcon from '@mui/icons-material/Timeline';
 
+
 const steps = [
   { title: 'Idea Generation', date: '01.01.2023', icon: <LightbulbIcon /> },
   { title: 'Planning', date: '10.02.2023', icon: <PlanIcon /> },
@@ -45,13 +46,17 @@ export default function DevelopmentTimeline() {
                   {step.date}
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  {index !== 0 && <TimelineConnector />} {/* Don't render before first item */}
+
+                  {index !== 0 && <TimelineConnector />} 
+
                   <TimelineDot>
                     <span className="bg-indigo-500 p-1 rounded-full inline-flex justify-center items-center">
                       {step.icon}
                     </span>
                   </TimelineDot>
+
                   {index !== steps.length - 1 && <TimelineConnector />} {/* Don't render after last item */}
+
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                   <Typography variant="h6" component="span">

@@ -37,6 +37,7 @@ const ProjectBusinessIntellegence = () => {
 
             <Grid container direction="column" className="justify-center" style={{ maxWidth: `calc(${targetWidth}px)`, margin: 'auto' }}>
                 <Grid item xs={12} mb={6} py={5} mt={5}>
+
                     <ProjectStorySection />
                 </Grid>
 
@@ -53,6 +54,7 @@ const ProjectBusinessIntellegence = () => {
                 </Grid>
 
                 <Grid item xs={12} mb={6}  >
+
                     <ExploreProjectSection />
                 </Grid>
             </Grid>
