@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Box } from '@mui/material';
-
-const ProjectStorySection = () => {
+import AutoStoriesTwoToneIcon from '@mui/icons-material/AutoStoriesTwoTone';const ProjectStorySection = () => {
   return (
     <Box className="my-4 p-2">
-      <Grid container spacing={2} alignItems="center"> 
+      <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} sm={12} md={4} className="flex items-center">
+          <AutoStoriesTwoToneIcon className="mr-2 text-indigo-500" /> {/* Add the icon here */}
           <h2 className="text-gray-800 font-bold text-xl">Project Story</h2>
         </Grid>
         <Grid item xs={12} sm={12} md={8}>
