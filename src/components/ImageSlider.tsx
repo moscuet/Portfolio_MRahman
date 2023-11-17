@@ -42,7 +42,7 @@ const ImageSlider = ({ images, url, projectName }: { images: string[], url: stri
                         <img src={image} alt={`Slide ${index}`} style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
                     </Paper>
                     <div className="absolute bottom-2 left-2 z-10 text-indigo-500 font-bold">
-                        {projectName} {/* Display project name */}
+                        {projectName}
                     </div>
                     <Link href={url} passHref>
                         <div onClick={handleDemoClick} className="absolute bottom-2 right-2 z-10 text-indigo-500 hover:text-blue-800 font-bold no-underline inline-flex items-center cursor-pointer">
