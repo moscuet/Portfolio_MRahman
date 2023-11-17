@@ -12,6 +12,8 @@ import PlanIcon from '@mui/icons-material/ListAlt';
 import DesignIcon from '@mui/icons-material/DesignServices';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/FlightTakeoff';
+import TimelineIcon from '@mui/icons-material/Timeline';
+
 
 const steps = [
   { title: 'Idea Generation', date: '01.01.2023', icon: <LightbulbIcon /> },
@@ -23,11 +25,12 @@ const steps = [
 
 export default function DevelopmentTimeline() {
   return (
-    <Box className="my-4 p-2">
+    <Box className="p-2">
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={4}>
+        
           <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
-            Project Timeline
+          <TimelineIcon  className="mr-2 text-indigo-500"/> Project Timeline
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={8}>
@@ -43,13 +46,17 @@ export default function DevelopmentTimeline() {
                   {step.date}
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineConnector />
+
+                  {index !== 0 && <TimelineConnector />} 
+
                   <TimelineDot>
                     <span className="bg-indigo-500 p-1 rounded-full inline-flex justify-center items-center">
                       {step.icon}
                     </span>
                   </TimelineDot>
-                  <TimelineConnector />
+
+                  {index !== steps.length - 1 && <TimelineConnector />} {/* Don't render after last item */}
+
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                   <Typography variant="h6" component="span">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 
 const textItems = [
     'Leadership - Leading the development team and overseeing technical aspects.',
@@ -10,12 +11,19 @@ const textItems = [
 
 const MyRoleAndContributions = () => {
     return (
-        <Box className="my-4 px-3 py-10  bg-gray-100 rounded-lg shadow-md">
+        <Box className="my-4 px-3 py-10  rounded-lg ">
             <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={12} md={4} className="flex items-center">
-                    <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl text-left">
-                        My Role and Contributions
-                    </Typography>
+                    <div className="flex flex-col">
+
+                        <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
+                            < LeaderboardIcon className="mr-2 text-indigo-500" /> My Role &
+                        </Typography>
+                        <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
+                            Contributions
+                        </Typography>
+                    </div>
+
                 </Grid>
                 <Grid item xs={12} sm={12} md={8}>
                     <ul className="list-none pl-0">
