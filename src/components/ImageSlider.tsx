@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Paper, Box } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Link from 'next/link';
 import Image from 'next/image';
 
 const ImageSlider = ({ images, url, projectName }: { images: string[], url: string, projectName: string }) => {
