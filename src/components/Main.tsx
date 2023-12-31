@@ -21,13 +21,13 @@ const Main = () => {
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   return (
-    <div className="w-full overflow-y-auto">
+    <div className="w-full overflow-y-auto pb-12">
       <div id="projects-section"
       >
 
         <Grid container justifyContent="center">
           <Grid item>
-            <div className="inline-block mb-6">
+            <div className="inline-block my-12">
               <span className="text-gray-800 text-xl font-bold">
                 MY PROJECT
               </span>
@@ -35,7 +35,7 @@ const Main = () => {
           </Grid>
         </Grid>
 
-        <Grid container spacing={2} justifyContent="center" style={{ padding: '0 20px' }}>
+        <Grid container spacing={3} justifyContent="center" style={{ padding: '0 20px' }}>
           {displayedProjects.map(project => (
             <Grid key={project.id} item xs={12} sm={6} md={6} lg={6}>
               <ProjectCard

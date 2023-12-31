@@ -13,9 +13,8 @@ const MyRoleAndContributions = () => {
     return (
         <Box className="my-4 px-3 py-10  rounded-lg ">
             <Grid container spacing={2} alignItems="center">
-                <Grid item xs={12} sm={12} md={4} className="flex items-center">
-                    <div className="flex flex-col">
-
+                <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
+                    <div className="flex flex-col ">
                         <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
                             < LeaderboardIcon className="mr-2 text-indigo-500" /> My Role &
                         </Typography>
@@ -23,8 +22,8 @@ const MyRoleAndContributions = () => {
                             Contributions
                         </Typography>
                     </div>
-
                 </Grid>
+                
                 <Grid item xs={12} sm={12} md={8}>
                     <ul className="list-none pl-0">
                         {textItems.map((item, index) => (

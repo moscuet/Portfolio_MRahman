@@ -7,7 +7,7 @@ const TechStackSection = ({ techStack }: { techStack: string[] }) => {
   return (
     <Box className="my-4 py-2" >
       <Grid container spacing={2} alignItems="center">
-        <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center md:justify-start">
+        <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
         <DeveloperModeIcon className="mr-2 text-indigo-500" />
 
           <h2 className="text-gray-800 font-bold text-xl">Tech Stack</h2>

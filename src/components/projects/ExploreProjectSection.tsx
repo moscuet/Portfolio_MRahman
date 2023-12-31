@@ -8,7 +8,7 @@ const ExploreProjectSection = () => {
   };
 
   return (
-    <Box className="p-3 bg-gray-100 rounded-lg shadow-md">
+    <Box className="p-3  mb-8 bg-gray-100 rounded-lg shadow-md">
 
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={4} className="flex items-center justify-start">
@@ -23,7 +23,7 @@ const ExploreProjectSection = () => {
             <Link href="/" passHref>
               <Button
                 variant="outlined"
-                className="border border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
+                className="border w-full border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
               >
                 Back to Home
               </Button>
