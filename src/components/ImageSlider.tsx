@@ -4,6 +4,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ImageSlider = ({ images, url, projectName }: { images: string[], url: string, projectName: string }) => {
     const [current, setCurrent] = useState(0);
@@ -27,25 +28,32 @@ const ImageSlider = ({ images, url, projectName }: { images: string[], url: stri
     }
 
     return (
-        <Box id='project-slider-container' style={{  height: '100%', overflow: 'hidden' }} position="relative">
-            <ArrowBackIosIcon
-                sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 11, cursor: 'pointer' }}
-                onClick={prevSlide}
-            />
-            <ArrowForwardIosIcon
-                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer' }}
-                onClick={nextSlide}
-            />
-            {images.map((image, index) => (
-                <div key={index} className={`${index === current ? 'block' : 'hidden'} relative h-full`}>
-                    <Paper elevation={3} sx={{ padding: 2, textAlign: 'center', height: '100%' }}>
-                        <img src={image} alt={`Slide ${index}`} style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
-                    </Paper>
-                </div>
-            ))}
-        </Box>
+        <Box id='project-slider-container' sx={{ height: '100%', overflow: 'hidden', position: 'relative' }}>
+        <ArrowBackIosIcon
+            sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 11, cursor: 'pointer' }}
+            onClick={prevSlide}
+        />
+        <ArrowForwardIosIcon
+            sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer' }}
+            onClick={nextSlide}
+        />
+        {images.map((image, index) => (
+            <Paper key={index} elevation={3} className={`${index === current ? 'block' : 'hidden'}`} sx={{ padding: 2, textAlign: 'center', maxWidth:'100%', height: '100%', position: 'relative' }}>
+                <Image
+                    src={image}
+                    alt={`Slide ${index}`}
+                    layout="responsive"
+                    width={16}
+                    height={9}
+                    objectFit="fit"
+                />
+            </Paper>
+        ))}
+    </Box>
     );
 };
 
 
 export default ImageSlider;
+
+
