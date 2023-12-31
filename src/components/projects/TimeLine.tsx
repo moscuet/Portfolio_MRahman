@@ -27,7 +27,7 @@ export default function DevelopmentTimeline() {
   return (
     <Box className="p-2">
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
         
           <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
           <TimelineIcon  className="mr-2 text-indigo-500"/> Project Timeline
