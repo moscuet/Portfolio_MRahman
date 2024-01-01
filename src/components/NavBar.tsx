@@ -26,16 +26,20 @@ export default function NavBar() {
         };
     }, []);
    
+
     useEffect(() => {
-        const handleClick = () => {
-           isNavOpen && toggleNav();
+        const handleClick = (event: MouseEvent) => {
+                    if (isNavOpen) {
+                        setTimeout(() => {
+                            toggleNav();
+                        }, 150);
+                    }
         };
-        document.addEventListener('mousedown', handleClick);
+        document.addEventListener('click', handleClick);
         return () => {
-            document.removeEventListener('mousedown', handleClick);
+            document.removeEventListener('click', handleClick);
         };
     }, [isNavOpen]);
-
     
     return (
         <>
@@ -67,7 +71,7 @@ export default function NavBar() {
             </div>
 
             {isNavOpen && (
-                <div className="fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
+                <div className="mobile-nav fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
                     <button onClick={toggleNav} className="text-indigo-500 self-end">
                         <FaTimes size={24} />
                     </button>
