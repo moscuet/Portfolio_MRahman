@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from '@mui/material';
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import Image from 'next/image';
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const mobileNavRef = useRef<HTMLDivElement>(null);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
@@ -20,8 +21,22 @@ export default function NavBar() {
     useEffect(() => {
         updateMedia();
         window.addEventListener('resize', updateMedia);
-        return () => window.removeEventListener('resize', updateMedia);
+        return () => {
+            window.removeEventListener('resize', updateMedia);
+        };
     }, []);
+   
+    useEffect(() => {
+        const handleClick = () => {
+           isNavOpen && toggleNav();
+        };
+        document.addEventListener('mousedown', handleClick);
+        return () => {
+            document.removeEventListener('mousedown', handleClick);
+        };
+    }, [isNavOpen]);
+
+    
     return (
         <>
             <div style={{ height: '100px' ,  zIndex: 12}} className="fixed top-0 left-0 right-0 z-10 flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-800">
@@ -36,7 +51,6 @@ export default function NavBar() {
                         />
                     </Link>
                 </div>
-
                 <div className="flex items-center">
                     <nav className="hidden lg:flex mr-4">
                         <a href="/" className="nav-link">PORTFOLIO</a>
@@ -53,11 +67,10 @@ export default function NavBar() {
             </div>
 
             {isNavOpen && (
-                <div className="fixed inset-y-0 right-0 z-10 bg-gray-100 p-8 flex flex-col w-[150px]">
+                <div className="fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
                     <button onClick={toggleNav} className="text-indigo-500 self-end">
                         <FaTimes size={24} />
                     </button>
-
                     <nav className="mt-4 flex flex-col">
                         <a href="#about-section" style={{ color: 'rgb(31, 41, 55)' }} className="nav-link mb-2 hover:text-indigo-600">ABOUT</a>
                         <a href="#projects-section" style={{ color: 'rgb(31, 41, 55)' }} className="nav-link mb-2 hover:text-indigo-600">PROJECTS</a>
