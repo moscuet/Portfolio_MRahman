@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     id: string;
@@ -27,22 +28,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
                 <Card sx={{ width: '100%', mb: 1 }}>
                     <CardMedia
                         component="div"
-                        sx={{ 
+                        sx={{
                             position: 'relative',
                             height: 'auto',
                             width: '100%',
                             overflow: 'hidden',
                         }}
                     >
-                        <img
+                        <Image
                             src={imageUrl}
                             alt={title}
-                            style={{ width: '100%', display: 'block' }}
+                            layout="responsive"
+                            width={16}
+                            height={9}
+                            objectFit="contain" 
                         />
                         <Typography
                             component="div"
                             variant="h5"
-                            sx={{ 
+                            sx={{
                                 position: 'absolute',
                                 bottom: 20,
                                 left: 20,
