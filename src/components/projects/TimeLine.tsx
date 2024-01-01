@@ -14,56 +14,68 @@ import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/FlightTakeoff';
 import TimelineIcon from '@mui/icons-material/Timeline';
 
+const iconMapping: { [key: string]: JSX.Element } = {
+  'Idea Generation': <LightbulbIcon />,
+  'Planning': <PlanIcon />,
+  'Design': <DesignIcon />,
+  'Development': <CodeIcon />,
+  'Deployment': <LaunchIcon />
+};
 
-const steps = [
-  { title: 'Idea Generation', date: '01.01.2023', icon: <LightbulbIcon /> },
-  { title: 'Planning', date: '10.02.2023', icon: <PlanIcon /> },
-  { title: 'Design', date: '05.03.2023', icon: <DesignIcon /> },
-  { title: 'Development', date: '15.04.2023', icon: <CodeIcon /> },
-  { title: 'Deployment', date: '30.05.2023', icon: <LaunchIcon /> },
-];
-
-export default function DevelopmentTimeline() {
+export default function DevelopmentTimeline({ developmentSteps }: { developmentSteps: { title: string, date: string }[] }) {
   return (
-    <Box className="p-2">
+    <Box >
       <Grid container spacing={2}>
+
         <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
-        
           <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
-          <TimelineIcon  className="mr-2 text-indigo-500"/> Project Timeline
+            <TimelineIcon className="mr-2 text-indigo-500" /> Project Timeline
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} md={8}>
-          <Timeline position="alternate">
-            {steps.map((step, index) => (
+
+        <Grid style={{margin:0,padding:0}} container item md={8} className='flex items-center justify-center'>
+          <Timeline style={{padding:0}}>
+            {developmentSteps.map((step, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent
                   sx={{ m: 'auto 0' }}
                   align="right"
                   variant="body2"
                   color="text.secondary"
+                  className='p-1 sm:p-3'
                 >
                   {step.date}
                 </TimelineOppositeContent>
+
+
                 <TimelineSeparator>
-
-                  {index !== 0 && <TimelineConnector />} 
-
+                  {index !== 0 && <TimelineConnector />}
                   <TimelineDot>
                     <span className="bg-indigo-500 p-1 rounded-full inline-flex justify-center items-center">
-                      {step.icon}
+                      {iconMapping[step.title]}
                     </span>
                   </TimelineDot>
-
-                  {index !== steps.length - 1 && <TimelineConnector />} {/* Don't render after last item */}
-
+                  {index !== developmentSteps.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <Typography variant="h6" component="span">
+
+
+                <TimelineContent className='p-1 sm:p-3' >
+                  <Typography
+                    variant="h6"
+                    component="span"
+                    sx={{ fontWeight: 'bold', fontSize: { xs: '0.75rem', sm: '1rem', md: '1.25rem' } }}
+                    className="sm:text-lg"
+                  >
                     {step.title}
                   </Typography>
-                  <Typography>Key activities and milestones</Typography>
+                  <Typography
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' } }}
+                    className="text-sm sm:text-base"
+                  >
+                    Key activities and milestones
+                  </Typography>
                 </TimelineContent>
+
               </TimelineItem>
             ))}
           </Timeline>
