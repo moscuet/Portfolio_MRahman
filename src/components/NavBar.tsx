@@ -8,14 +8,13 @@ import Image from 'next/image';
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const mobileNavRef = useRef<HTMLDivElement>(null);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
     };
 
     const updateMedia = () => {
-        setIsMobile(window.innerWidth < 1024);
+        setIsMobile(window.innerWidth < 768);
     };
 
     useEffect(() => {
@@ -56,7 +55,7 @@ export default function NavBar() {
                     </Link>
                 </div>
                 <div className="flex items-center">
-                    <nav className="hidden lg:flex mr-4">
+                    <nav className="hidden md:flex mr-4">
                         <a href="/" className="nav-link">PORTFOLIO</a>
                         <a href="/about" className="nav-link">ABOUT</a>
                         <a href="/contact" className="nav-link">CONTACT</a>
