@@ -8,6 +8,7 @@ import Image from 'next/image';
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const mobileNavRef = useRef<HTMLDivElement>(null);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
@@ -39,6 +40,7 @@ export default function NavBar() {
             document.removeEventListener('click', handleClick);
         };
     }, [isNavOpen]);
+
     
     return (
         <>
@@ -71,6 +73,7 @@ export default function NavBar() {
 
             {isNavOpen && (
                 <div className="mobile-nav fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
+
                     <button onClick={toggleNav} className="text-indigo-500 self-end">
                         <FaTimes size={24} />
                     </button>

@@ -42,7 +42,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="min-h-screen flex-grow flex flex-col justify-center items-center p-4 relative">
+            <div style={{border:'5px solid blue'}} className="min-h-screen flex-grow flex flex-col justify-center items-center p-4 relative">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-10">
                     Hi, I am Rahman
                 </h1>
