@@ -15,7 +15,7 @@ export default function NavBar() {
     };
 
     const updateMedia = () => {
-        setIsMobile(window.innerWidth < 1024);
+        setIsMobile(window.innerWidth < 768);
     };
 
     useEffect(() => {
@@ -26,13 +26,18 @@ export default function NavBar() {
         };
     }, []);
    
+
     useEffect(() => {
-        const handleClick = () => {
-           isNavOpen && toggleNav();
+        const handleClick = (event: MouseEvent) => {
+                    if (isNavOpen) {
+                        setTimeout(() => {
+                            toggleNav();
+                        }, 150);
+                    }
         };
-        document.addEventListener('mousedown', handleClick);
+        document.addEventListener('click', handleClick);
         return () => {
-            document.removeEventListener('mousedown', handleClick);
+            document.removeEventListener('click', handleClick);
         };
     }, [isNavOpen]);
 
@@ -52,7 +57,7 @@ export default function NavBar() {
                     </Link>
                 </div>
                 <div className="flex items-center">
-                    <nav className="hidden lg:flex mr-4">
+                    <nav className="hidden md:flex mr-4">
                         <a href="/" className="nav-link">PORTFOLIO</a>
                         <a href="/about" className="nav-link">ABOUT</a>
                         <a href="/contact" className="nav-link">CONTACT</a>
@@ -67,7 +72,8 @@ export default function NavBar() {
             </div>
 
             {isNavOpen && (
-                <div className="fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
+                <div className="mobile-nav fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
+
                     <button onClick={toggleNav} className="text-indigo-500 self-end">
                         <FaTimes size={24} />
                     </button>

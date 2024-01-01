@@ -27,7 +27,7 @@ const ImageSlider = ({ images, url, projectName }: { images: string[], url: stri
                 onClick={prevSlide}
             />
             <ArrowForwardIosIcon
-                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer' }}
+                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer'}}
                 onClick={nextSlide}
             />
             {images.map((image, index) => (
