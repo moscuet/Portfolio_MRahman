@@ -1,4 +1,3 @@
-// components/SocialSidebar.jsx
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export default function SocialSidebar() {
