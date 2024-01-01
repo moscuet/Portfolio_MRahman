@@ -1,65 +1,48 @@
 'use client'
-import React, { useEffect, useState } from 'react';
-import { Grid } from '@mui/material';
-import ImageSlider from '@/components/ImageSlider';
-import LandingPageLayout from '../LandingPageLayout';
-import DevelopmentTimeline from '@/components/projects/TimeLine';
-import MyRoleAndContributions from '../MyRoleAndContribution';
-import ExploreProjectSection from '../ExploreProjectSection';
-import ProjectStorySection from '../StorySection';
-import TechStackSection from '../TechStackSection';
+import React from 'react';
+import ProjectTemplate from '../ProjectTemplate';
 
-const ProjectBusinessIntellegence = () => {
+const title='Business Intelligence Website'
+const images = [
+    '/assets/images/business_Intelligence_01.png',
+    '/assets/images/business_Intelligence_02.png',
+    '/assets/images/business_Intelligence_03.png',
+    '/assets/images/business_Intelligence_04.png',
+    '/assets/images/business_Intelligence_05.png'
+]
+const github='https://github.com/moscuet/Project-Business-consulting-intelligence' 
+const url ='https://awesome-mahavira-48e62b.netlify.app/'
+const techStack = ['Gatsby.js', 'GraphQL', 'Figma', 'Contentful', 'Mailchimp', 'Netlify'];
+const story = 'This is a group project for a business intelligence consulting company. Because of privacy reasons, we can&apos;t share the code publicly. The site demo was deployed on Netlify by removing the company&apos;s credentials, and here is the demo link.'
+const roles = [
+    'Leadership - Leading the development team and overseeing technical aspects.',
+    'Project Management - Ensuring project milestones and deadlines are met.',
+    'Technical Expertise - Implementing modern technologies and optimizing performance.',
+    'Mentorship - Guiding junior developers and promoting team collaboration.'
+];
+const developmentSteps = [
+    { title: 'Idea Generation', date: '01.01.2023' },
+    { title: 'Planning', date: '10.02.2023' },
+    { title: 'Design', date: '05.03.2023' },
+    { title: 'Development', date: '15.04.2023'},
+    { title: 'Deployment', date: '30.05.2023'},
+  ];
 
-    const [targetWidth, setTargetWidth] = useState(0);
-    const techStack = ['Gatsby.js', 'GraphQL', 'Figma', 'Contentful', 'Mailchimp', 'Netlify'];
 
-    useEffect(() => {
-        const targetElement = document.getElementById('project-slider-container');
-        if (targetElement) {
-            setTargetWidth(targetElement.offsetWidth);
-        }
-    }, []);
-
+  const ProjectBusinessIntellegence = () => {
     return (
-        <Grid container className="justify-center" >
-            <LandingPageLayout
-                title='Business Intelligence Website'
-                images={[
-                    '/assets/images/business_Intelligence_01.png',
-                    '/assets/images/business_Intelligence_02.png',
-                    '/assets/images/business_Intelligence_03.png',
-                    '/assets/images/business_Intelligence_04.png',
-                    '/assets/images/business_Intelligence_05.png'
-                ]}
-                url='https://awesome-mahavira-48e62b.netlify.app'
-            />
-
-            <Grid container direction="column" className="justify-center" style={{ maxWidth: `calc(${targetWidth}px)`, margin: 'auto' }}>
-                <Grid item xs={12} mb={6} py={5} mt={5}>
-
-                    <ProjectStorySection />
-                </Grid>
-
-                <Grid item xs={12} mb={6} py={5}  >
-                    <TechStackSection techStack={techStack} />
-                </Grid>
-
-                <Grid item xs={12} mb={6} py={5}  >
-                    <MyRoleAndContributions />
-                </Grid>
-
-                <Grid item xs={12} mb={6} py={5}  >
-                    <DevelopmentTimeline />
-                </Grid>
-
-                <Grid item xs={12} mb={6}  >
-
-                    <ExploreProjectSection />
-                </Grid>
-            </Grid>
-        </Grid>
+      <ProjectTemplate
+        title={title}
+        images={images}
+        github={github}
+        url={url}
+        techStack={techStack}
+        story={story}
+        roles={roles}
+        developmentSteps={developmentSteps}
+      />
     );
-};
-
-export default ProjectBusinessIntellegence;
+  };
+  
+  export default ProjectBusinessIntellegence;
+  
