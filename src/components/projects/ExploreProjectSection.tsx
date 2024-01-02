@@ -29,9 +29,9 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
         <Grid item xs={12} sm={12} md={8} className="flex items-center" style={{ height: '150px' }}>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full justify-center">
 
-
             <Button
               variant="outlined"
+              onClick={handleDemoClick}
               className="border w-full border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
             >
               <span className="sm:hidden">Live Demo</span>
@@ -41,6 +41,7 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
 
             <Button
               variant="outlined"
+              onClick={handleGithubClick}
               className="border w-full border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
             >
               <span className="sm:hidden">Github</span>
