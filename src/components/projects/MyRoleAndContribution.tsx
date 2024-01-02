@@ -5,7 +5,7 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 
 const MyRoleAndContributions = ({ roles }: { roles: string[] }) => {
     return (
-        <Box className="my-4 px-3 py-10  rounded-lg ">
+        <Box >
             <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
                     <div className="flex flex-col ">

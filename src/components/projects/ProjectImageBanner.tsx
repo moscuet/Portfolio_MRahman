@@ -6,7 +6,7 @@ import FollowDownAnimation from '../FollowDownAnimation';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 
-const ProjectBusinessIntellegence = ({ title, images, url , github}: { title: string, images: string[], url: string, github:string }) => {
+const ProjectImageBanner = ({ title, images, url , github}: { title: string, images: string[], url: string, github:string }) => {
     const handleDemoClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.preventDefault();
         window.open(url, '_blank', 'noopener,noreferrer');
@@ -20,8 +20,8 @@ const ProjectBusinessIntellegence = ({ title, images, url , github}: { title: st
 
     return (
         <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)', display: 'flex' }}>
-            <Grid style={{ display: 'inline-flex', justifyContent: 'center' }} className="mb-5">
-                <div style={{ maxHeight: 'calc(100vh - 250px)', maxWidth: 'calc(100vw - 150px)', overflow: 'hidden' }}>
+            <Grid style={{  display: 'inline-flex', justifyContent: 'center' }} className="mb-5">
+                <div style={{ maxHeight: 'calc(100vh - 250px)', overflow: 'hidden' }}>
                     <ImageSlider images={images} url={url} projectName={title} />
                 </div>
             </Grid>
@@ -66,4 +66,4 @@ const ProjectBusinessIntellegence = ({ title, images, url , github}: { title: st
     );
 };
 
-export default ProjectBusinessIntellegence;
+export default ProjectImageBanner;

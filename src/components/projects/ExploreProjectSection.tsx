@@ -19,7 +19,7 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
   };
 
   return (
-    <Box  className="p-3  mb-8 bg-gray-100 rounded-lg shadow-md ">
+    <Box className="py-5  mb-5 bg-gray-100 rounded-lg shadow-md ">
 
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={4} className="flex items-center justify-start">

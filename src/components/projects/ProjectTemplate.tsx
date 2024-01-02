@@ -6,7 +6,7 @@ import MyRoleAndContributions from '@/components/projects/MyRoleAndContribution'
 import ExploreProjectSection from '@/components/projects/ExploreProjectSection';
 import ProjectStorySection from '@/components/projects/StorySection';
 import TechStackSection from '@/components/projects/TechStackSection';
-import LandingPageLayout from '@/components/projects/LandingPageLayout';
+import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
 
   type ProjectTemplateProps = {
     title: string;
@@ -33,8 +33,8 @@ import LandingPageLayout from '@/components/projects/LandingPageLayout';
     }, []);
 
     return (
-        <Grid  container className="justify-center "  >
-            <LandingPageLayout
+        <Grid container className="justify-center "  >
+            <ProjecImageBanner
                 title={title}
                 images={images}
                 url={url}

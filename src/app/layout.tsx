@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 
-        <div className="px-12 min-h-screen bg-gray-200">
+        <div className="pl-6 pr-3 sm:px-12 min-h-screen bg-gray-200">
           <NavBar />
           <SocialSideBar />
           {children}
