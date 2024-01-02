@@ -4,7 +4,7 @@ import AutoStoriesTwoToneIcon from '@mui/icons-material/AutoStoriesTwoTone';
 
 const ProjectStorySection = ({story}:{story:string}) => {
   return (
-    <Box className="my-4 md:p-2">
+    <Box >
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
           <AutoStoriesTwoToneIcon className="mr-2 text-indigo-500" />
