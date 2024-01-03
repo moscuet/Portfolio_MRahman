@@ -8,6 +8,7 @@ import Head from 'next/head';
 
 import '../styles/navBar.css'
 import '../styles/home.css'
+import SocialMediaIcons from '@/components/SocialSideBar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +29,7 @@ export default function RootLayout({
 
         <div className="pl-6 pr-3 sm:px-12 min-h-screen bg-gray-200">
           <NavBar />
-          <SocialSideBar />
+          <SocialMediaIcons className="fixed left-0 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 p-1 sm:p-2 md:p-4" />
           {children}
           <Footer />
         </div>
