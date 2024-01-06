@@ -37,7 +37,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
                             height: 'auto',
                             width: '100%',
                             overflow: 'hidden',
-                            border:'5px solid red'
                         }}
                     
                     >
