@@ -15,9 +15,11 @@ export default function AboutMe() {
     return (
         <section style={{ paddingTop: '120px', paddingBottom: '150px', fontFamily: 'LinguisticsPro-Regular' }} className="flex flex-col sm:flex-row bg-gray-200 pb-20 w-full max-w-5xl ">
             <div className="container w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-4 flex flex-col items-center justify-center">
-                <Image
+              <Image
                     src={'/assets/cv_photo.jpg'}
                     alt="Profile"
+                    width={160}
+                    height={160}
                     className="rounded-full w-40 h-40 lg:w-60 lg:h-60 mb-2 border-2 border-gray-300"
                 />
                 <span className='text-gray-900 bold mb-4'> Mostafizur Rahman</span>
