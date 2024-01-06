@@ -1,0 +1,31 @@
+
+@media (max-width: 350px) {
+    .custom-height {
+        height: 1000px;
+    }
+  }
+
+
+  @media (min-width: 351px) and (max-width: 430px) {
+    .custom-height {
+        height: 900px;
+    }
+  }
+
+  @media (min-width: 431px) and (max-width: 780px) {
+    .custom-height {
+        height: 800px;
+    }
+  }
+
+  @media (min-width: 781px) and (max-width: 1023px) {
+    .custom-height {
+        height: 700px;
+    }
+  }
+
+  @media (min-width: 1024px)  {
+    .custom-height {
+        height: 450px;
+    }
+  }
