@@ -33,12 +33,12 @@ const ImageSlider = ({ images, url, projectName }: { images: string[], url: stri
             {images.map((image, index) => (
                 <Paper key={index} elevation={3} className={`${index === current ? 'block' : 'hidden'}`} sx={{ padding: 2, textAlign: 'center', maxWidth: '100%', height: '100%', position: 'relative' }}>
                     <Image
-                        src={image}
-                        alt={`Slide ${index}`}
-                        layout="responsive"
-                        width={16}
-                        height={9}
-                        objectFit="fit"
+                      src={image}
+                      alt={`Slide ${index}`}
+                      width={1600}
+                      height={900}
+                      layout='responsive'
+                      style={{objectFit: "contain"}}
                     />
                 </Paper>
             ))}

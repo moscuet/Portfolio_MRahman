@@ -16,9 +16,7 @@ export default function NavBar() {
     }, []);
 
 
-    const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
+   
 
     const updateMedia = () => {
         setIsMobile(window.innerWidth < 768);
@@ -34,6 +32,9 @@ export default function NavBar() {
 
 
     useEffect(() => {
+        const toggleNav = () => {
+            setIsNavOpen(!isNavOpen);
+        };
         const handleClick = (event: MouseEvent) => {
             if (isNavOpen) {
                 setTimeout(() => {
@@ -71,7 +72,7 @@ export default function NavBar() {
                     </nav>
 
                     {isMobile && (
-                        <Button onClick={toggleNav} className="ml-4">
+                        <Button onClick={()=>setIsNavOpen(!isNavOpen)} className="ml-4">
                             <FaBars size={24} color="#6366F1" />
                         </Button>
                     )}
@@ -81,7 +82,7 @@ export default function NavBar() {
             {isNavOpen && (
                 <div className="mobile-nav fixed inset-y-0 right-0 z-30 bg-gray-100 p-8 flex flex-col w-[150px]">
 
-                    <button onClick={toggleNav} className="text-indigo-500 self-end">
+                    <button onClick={()=>setIsNavOpen(!isNavOpen)} className="text-indigo-500 self-end">
                         <FaTimes size={24} />
                     </button>
                     <nav className="mt-4 flex flex-col">
