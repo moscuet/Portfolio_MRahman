@@ -1,6 +1,7 @@
 import Main from '@/components/Main';
 import FollowDownAnimation from '@/components/FollowDownAnimation';
 import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -13,9 +14,11 @@ export default function Home() {
                 <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
                     A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
                 </p>
-                <Button className='my-6' variant={'primary'}>
-                    Show All Projects
-                </Button>
+                <Link href="/about" passHref>
+                    <Button variant="primary" className='my-6'>
+                        More About Me
+                    </Button>
+                </Link>
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />
                 </div>
