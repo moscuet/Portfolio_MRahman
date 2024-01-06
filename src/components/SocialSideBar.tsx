@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const SocialMediaIcons = ({ className = '' }) => {
   return (
-    <div className={`flex gap-5 ${className}`}>
+    <div className={`z-30 flex gap-5 ${className}`}>
       <Link href="https://github.com">
         <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
           <FaGithub size="24" />

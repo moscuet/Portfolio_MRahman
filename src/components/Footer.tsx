@@ -24,7 +24,7 @@ const Footer = () => {
           </li>
           <li className="mt-2">
             <Link href="/projects">
-              <span className="hover:underline text-indigo-500 cursor-pointer">Projects</span>
+              <span className="hover:underline text-indigo-500 cursor-pointer">PROJECTS</span>
             </Link>
           </li>
         </ul>

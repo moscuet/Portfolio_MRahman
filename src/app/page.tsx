@@ -46,11 +46,11 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-10">
                     Hi, I am Rahman
                 </h1>
-             <div className='max-w-4xl'>
-             <p className="text-base md:text-xl lg:text-xl text-gray-900 text-center mt-4 md:px-10 lg:px-20">
-                    A Full-Stack Developer from Helsinki. I create user-centric web experiences, where simplicity and functionality seamlessly merge with latest technologies.
-                </p>
-             </div>
+                <div className='max-w-4xl'>
+                    <p className="text-base md:text-xl lg:text-xl text-gray-900 text-center mt-4 md:px-10 lg:px-20">
+                        A Full-Stack Developer from Helsinki. My work as coder is my passion and I love to develop user-friendly solutions.
+                    </p>
+                </div>
                 <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
                     <span className="animated-light-gradient-text">More about me</span>
                 </Button>

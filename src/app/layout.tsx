@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/NavBar';
-import SocialSideBar from '@/components/SocialSideBar';
 import Footer from '@/components/Footer';
-import Head from 'next/head';
 
 import '../styles/navBar.css'
 import '../styles/home.css'
