@@ -25,7 +25,7 @@ export default function ProjectSection() {
         <Grid item>
           <div className="inline-block mb-12">
             <span className="text-gray-900 text-xl font-bold">
-              MY PROJECT
+              MY PROJECTS
             </span>
           </div>
         </Grid>

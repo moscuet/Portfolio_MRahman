@@ -1,6 +1,4 @@
-'use client'
 import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 import SocialMediaIcons from './SocialSideBar';
 import { Button } from './ui/Button';
@@ -15,17 +13,12 @@ const Footer = () => {
             <ul className="mb-4">
               <li className="mt-2">
                 <Link href="/">
-                  <span className="hover:underline text-indigo-500 cursor-pointer">Home</span>
+                  <span className="hover:underline text-indigo-500 cursor-pointer">HOME</span>
                 </Link>
               </li>
               <li className="mt-2">
                 <Link href="/about">
-                  <span className="hover:underline text-indigo-500 cursor-pointer">About</span>
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link href="/projects">
-                  <span className="hover:underline text-indigo-500 cursor-pointer">PROJECTS</span>
+                  <span className="hover:underline text-indigo-500 cursor-pointer">ABOUT</span>
                 </Link>
               </li>
             </ul>
@@ -38,9 +31,11 @@ const Footer = () => {
           <div className="text-center mb-6 md:mb-0">
             <h5 className="uppercase mb-6 font-bold">Get in Touch</h5>
 
-            <Button variant={'primary'} size={'default'}>
-             Contact me
-            </Button>
+            <Link href="/contact" passHref>
+              <Button variant="primary" size="default">
+                Contact me
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
