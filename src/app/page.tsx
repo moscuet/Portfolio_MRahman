@@ -14,7 +14,7 @@ export default function Home() {
                     A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
                 </p>
                 <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
-                    <span className="animated-light-gradient-text">More about me</span>
+                    <span >More about me</span>
                 </Button>
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />

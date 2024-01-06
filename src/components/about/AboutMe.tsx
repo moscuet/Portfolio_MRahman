@@ -1,6 +1,15 @@
 import React from 'react'
 import { Button } from '../ui/Button'
 import Image from 'next/image';
+interface MyImageLoaderProps {
+    src: string;
+    width: number;
+    quality?: number;
+  }
+  
+  function myImageLoader({ src, width, quality }: MyImageLoaderProps): string {
+    return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+  }
 
 export default function AboutMe() {
     return (
