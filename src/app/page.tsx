@@ -1,43 +1,8 @@
-'use client'
 import { Button } from '@mui/material';
-import { useEffect, useState } from 'react';
 import Main from '@/components/Main';
 import FollowDownAnimation from '@/components/FollowDownAnimation';
 
-
-type Skill = {
-    id: number;
-    name: string;
-    proficiencyLevel: number;
-};
-
-type SkillsCategory = 'Frontend' | 'Backend' | 'Database' | 'DevOps' | 'Other';
-
-type SkillsState = {
-    [key in SkillsCategory]: Skill[];
-};
-
 export default function Home() {
-    const [skills, setSkills] = useState<SkillsState>({
-        Frontend: [],
-        Backend: [],
-        Database: [],
-        DevOps: [],
-        Other: [],
-    });
-
-
-    useEffect(() => {
-        async function fetchSkills() {
-            const response = await fetch('/api/skills');
-            const data = await response.json();
-            setSkills(data.skills);
-        }
-
-        fetchSkills().catch(console.error);
-    }, []);
-
-
 
     return (
         <>
