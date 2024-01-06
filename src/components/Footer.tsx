@@ -44,10 +44,6 @@ const Footer = () => {
         <p className="text-sm font-light text-gray-900">Crafting seamless web experiences.</p>
       </div>
     </footer>
-
-
-
-
   );
 };
 

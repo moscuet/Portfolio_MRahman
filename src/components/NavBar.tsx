@@ -12,7 +12,6 @@ export default function NavBar() {
 
     useEffect(() => {
         const currentPath = window.location.pathname;
-        console.log('activepath', currentPath)
         setActiveTab(currentPath);
     }, []);
 
