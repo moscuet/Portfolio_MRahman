@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../styles/about.css'
-import AboutMe from '@/components/about/AboutMe';
-import MySkills from '@/components/about/MySkills';
+import dynamic from 'next/dynamic';
+const AboutMe = dynamic(() => import('@/components/about/AboutMe'))
+const MySkills= dynamic(() => import('@/components/about/MySkills'))
 
 const page = () => {
     return (

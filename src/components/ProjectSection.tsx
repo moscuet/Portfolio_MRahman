@@ -1,4 +1,6 @@
-import { Button as button, Grid } from '@mui/material';
+'use client'
+
+import { Grid } from '@mui/material';
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { Button } from './ui/Button';

@@ -38,14 +38,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
                             width: '100%',
                             overflow: 'hidden',
                         }}
-                    
+
                     >
                         <Image
                             src={imageUrl}
                             alt={title}
                             width={1600}
                             height={900}
-                            // sizes="(max-width: 768px) 90vw, 80vw"
                             style={{objectFit: "contain"}}	
                         />
 

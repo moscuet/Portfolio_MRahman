@@ -1,43 +1,8 @@
-'use client'
 import { Button } from '@mui/material';
-import { useEffect, useState } from 'react';
 import Main from '@/components/Main';
 import FollowDownAnimation from '@/components/FollowDownAnimation';
 
-
-type Skill = {
-    id: number;
-    name: string;
-    proficiencyLevel: number;
-};
-
-type SkillsCategory = 'Frontend' | 'Backend' | 'Database' | 'DevOps' | 'Other';
-
-type SkillsState = {
-    [key in SkillsCategory]: Skill[];
-};
-
 export default function Home() {
-    const [skills, setSkills] = useState<SkillsState>({
-        Frontend: [],
-        Backend: [],
-        Database: [],
-        DevOps: [],
-        Other: [],
-    });
-
-
-    useEffect(() => {
-        async function fetchSkills() {
-            const response = await fetch('/api/skills');
-            const data = await response.json();
-            setSkills(data.skills);
-        }
-
-        fetchSkills().catch(console.error);
-    }, []);
-
-
 
     return (
         <>
@@ -49,7 +14,7 @@ export default function Home() {
                     A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
                 </p>
                 <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
-                    <span className="animated-light-gradient-text">More about me</span>
+                    <span >More about me</span>
                 </Button>
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />
