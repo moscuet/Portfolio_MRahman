@@ -16,7 +16,7 @@ const MySkills = () => {
             </div>
             <div className="mb-[50px] lg:mb-[150px] text-gray-800 ">
                 <span className='flex text-justify mt-2 mb-4 px-3 sm:px-4 md:px-6 lg:px-8'>
-                    In my development journey, I've worked with a range of modern tools and technologies. The following are some key examples
+                    In my development journey, I&rsquo;ve worked with a range of modern tools and technologies. The following are some key examples
                 </span>
             </div>
             <section className="w-screen relative bg-gray-50 custom-height -ml-6 sm:ml-0">
