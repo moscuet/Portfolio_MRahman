@@ -17,7 +17,7 @@ export const backendSkills = ['Node.js', 'Express.js', 'REST API', 'MariaDB', 'M
 
             <section className="w-screen relative bg-gray-50 custom-height -ml-6 sm:ml-0">
                 <div className="absolute top-[-50px] lg:top-[-100px] left-1/2 -translate-x-1/2 w-[85vw] rounded-t-[10px] flex flex-col lg:flex-row items-stretch justify-center">
-                    <div className="xl:w-1/2 bg-gradient-to-r from-green-300 to-blue-500 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
+                    <div className="xl:w-1/2 bg-gradient-to-b from-indigo-300 to-indigo-100 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
                         <h3 className="text-white text-lg font-bold mb-4 text-center">Frontend Skills</h3>
                         <div className="flex flex-col justify-center items-center">
                             <div className="flex flex-wrap text-gray-600 justify-center gap-2">
@@ -28,7 +28,7 @@ export const backendSkills = ['Node.js', 'Express.js', 'REST API', 'MariaDB', 'M
                         </div>
                     </div>
 
-                    <div className="xl:w-1/4 bg-gradient-to-r from-blue-500 to-purple-300 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
+                    <div className="xl:w-1/4 bg-gradient-to-b from-indigo-300 to-indigo-100 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
                         <h3 className="text-white text-lg font-bold mb-4 text-center">Backend Skills</h3>
                         <div className="flex flex-col justify-center items-center">
                             <div className="flex text-gray-600 flex-wrap justify-center gap-2">
@@ -39,7 +39,7 @@ export const backendSkills = ['Node.js', 'Express.js', 'REST API', 'MariaDB', 'M
                         </div>
                     </div>
 
-                    <div className="xl:w-1/4 bg-gradient-to-r from-purple-300 to-pink-500 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
+                    <div className="xl:w-1/4 bg-gradient-to-b from-indigo-300 to-indigo-100 rounded-lg py-12 px-1 sm:px-2 md:px-4 lg:px-6 m-2 flex flex-col shadow-2xl transform transition duration-300 ease-in-out hover:scale-105">
                         <h3 className="text-white text-lg font-bold mb-4 text-center">DevOps Skills</h3>
                         <div className="flex flex-col justify-center items-center">
                             <div className="flex text-gray-600 flex-wrap justify-center gap-2">

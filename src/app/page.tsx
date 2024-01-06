@@ -1,9 +1,10 @@
 'use client'
-import { Button, Grid } from '@mui/material';
+import { Button as button, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 import Main from '@/components/Main';
 import FollowDownAnimation from '@/components/FollowDownAnimation';
+import { Button } from '@/components/ui/Button';
 
 
 type Skill = {
@@ -48,11 +49,11 @@ export default function Home() {
                 </h1>
                 <div className='max-w-4xl'>
                     <p className="text-base md:text-xl lg:text-xl text-gray-900 text-center mt-4 md:px-10 lg:px-20">
-                        A Full-Stack Developer from Helsinki. My work as coder is my passion and I love to develop user-friendly solutions.
+                        A Full-Stack Developer from Helsinki. Coding is my passion and I love to develop user-friendly solutions.
                     </p>
                 </div>
-                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
-                    <span className="animated-light-gradient-text">More about me</span>
+                <Button className='my-6' variant={'primary'} size={'default'}>
+                    More about me
                 </Button>
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />

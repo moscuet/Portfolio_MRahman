@@ -4,20 +4,20 @@ import Link from 'next/link';
 
 const SocialMediaIcons = ({ className = '' }) => {
   return (
-    <div className={`z-30 flex gap-5 ${className}`}>
+    <div className={`z-20 flex gap-5 ${className}`}>
       <Link href="https://github.com">
-        <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
-          <FaGithub size="24" />
+        <span className="cursor-pointer text-indigo-500  hover:text-indigo-600">
+          <FaGithub className="hover:scale-125" size="24" />
         </span>
       </Link>
       <Link href="https://linkedin.com">
         <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
-          <FaLinkedin size="24" />
+          <FaLinkedin className="hover:scale-125" size="24" />
         </span>
       </Link>
       <Link href="https://instagram.com">
         <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
-          <FaInstagram size="24" />
+          <FaInstagram className="hover:scale-125" size="24" />
         </span>
       </Link>
     </div>

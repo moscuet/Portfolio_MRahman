@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '../ui/Button'
 
 export default function AboutMe() {
     return (
@@ -10,16 +11,15 @@ export default function AboutMe() {
                     className="rounded-full w-40 h-40 lg:w-60 lg:h-60 mb-2 border-2 border-gray-300"
                 />
                 <span className='text-gray-900 bold mb-4'> Mostafizur Rahman</span>
-                <a
-                    href={'/assets/cv_mostafizur_rahman.pdf'}
-                    download
-                    className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded"
-                >
-                    Download Resume
+                <a href="/assets/cv_mostafizur_rahman.pdf" download className="inline-block">
+                    <Button variant="primary">
+                        Download Resume
+                    </Button>
                 </a>
             </div>
             <div className="container w-full sm:w-1/2 md:w-2/3 lg:w-2/3 gap-3  p-2 sm:p-0 text-base text-center text-gray-900">
                 <span className='flex text-justify mt-2 mb-2'>
+
                     Hi,
                 </span>
                 <span className='flex text-justify mt-2 mb-4'>

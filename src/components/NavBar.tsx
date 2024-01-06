@@ -50,7 +50,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div style={{ height: '100px', }} className="fixed top-0 left-0 right-0 z-20 flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-900">
+            <div style={{ height: '100px', }} className="fixed top-0 left-0 right-0 z-12 flex flex-row justify-between items-center w-full pr-4 bg-gray-100 text-gray-900">
                 <div className="flex items-center" style={{ height: '100%' }}>
                     <Link href="/" passHref>
                         <Image
@@ -79,7 +79,7 @@ export default function NavBar() {
             </div>
 
             {isNavOpen && (
-                <div className="mobile-nav fixed inset-y-0 right-0 z-20 bg-gray-100 p-8 flex flex-col w-[150px]">
+                <div className="mobile-nav fixed inset-y-0 right-0 z-12 bg-gray-100 p-8 flex flex-col w-[150px]">
 
                     <button onClick={toggleNav} className="text-indigo-500 self-end">
                         <FaTimes size={24} />

@@ -1,10 +1,6 @@
 import React from 'react';
 import ProjectSection from './ProjectSection';
 
-interface MainProps {
-  children: React.ReactNode;
-}
-
 
 const Main = () => {
 
