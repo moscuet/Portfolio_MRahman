@@ -28,6 +28,7 @@ export default function AboutMe() {
                 </span>
                 <span className='flex text-justify mb-4'>
                     Currently, I&rsquo;m actively learning Next.js and deepening my understanding of artificial intelligence through the &rsquo;Elements of AI&rsquo; course.
+
                 </span >
                 <span className='flex text-justify mb-4'>
                     In my free time, I immerse myself in movies and embrace the challenge of swimming. I am passionate about exploring new destinations, experimenting with diverse cuisines, and cooking delectable Asian meals. Often, you&rsquo;ll find me relaxing on the sofa, catching up on the latest tech news.
