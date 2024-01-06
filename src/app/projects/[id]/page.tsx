@@ -16,4 +16,4 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   }
 
   return <div className="text-gray-900 pl-1 sm:pl-2 lg:pl-4" style={{ paddingTop: '120px'}}> <ProjectComponent /> </div>;
-}
+

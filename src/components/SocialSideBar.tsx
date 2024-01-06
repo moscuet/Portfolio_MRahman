@@ -20,6 +20,7 @@ const SocialMediaIcons = ({ className = '' }) => {
           <FaInstagram size="24" />
         </span>
       </Link>
+
     </div>
   );
 };
