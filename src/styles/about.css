@@ -1,0 +1,38 @@
+
+@media (max-width: 340px) {
+    .custom-height {
+        height: 850px;
+    }
+  }
+
+
+  @media (min-width: 341px) and (max-width: 400px) {
+    .custom-height {
+        height: 750px;
+    }
+  }
+
+  @media (min-width: 401px) and (max-width: 640px) {
+    .custom-height {
+        height: 700px;
+    }
+  }
+
+
+  @media (min-width: 641px) and (max-width: 850px) {
+    .custom-height {
+        height: 900px;
+    }
+  }
+
+  @media (min-width: 851px) and (max-width: 1023px) {
+    .custom-height {
+        height: 800px;
+    }
+  }
+
+  @media (min-width: 1024px)  {
+    .custom-height {
+        height: 450px;
+    }
+  }

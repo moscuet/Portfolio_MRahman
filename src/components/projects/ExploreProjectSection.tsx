@@ -24,7 +24,6 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
       <Grid container spacing={2}>
       <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900">Explore the Project</h2>
-
         </Grid>
 
         <Grid item xs={12} sm={12} md={8} className="flex items-center" style={{ height: '150px' }}>
