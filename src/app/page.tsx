@@ -1,6 +1,6 @@
-import { Button } from '@mui/material';
 import Main from '@/components/Main';
 import FollowDownAnimation from '@/components/FollowDownAnimation';
+import { Button } from '@/components/ui/Button';
 
 export default function Home() {
 
@@ -13,8 +13,8 @@ export default function Home() {
                 <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
                     A Full-Stack Developer in Helsinki, creating seamless web experiences where technology meets user needs.
                 </p>
-                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold my-6 py-2 px-4 rounded">
-                    <span >More about me</span>
+                <Button className='my-6' variant={'primary'}>
+                    Show All Projects
                 </Button>
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />
