@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { ImageLoader } from 'next/image';
 
 interface ProjectCardProps {
     id: string;
@@ -13,6 +13,10 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
+    const imageLoader = ({ src, width, quality }:{src:ImageLoader, width:string, quality:string}) => {
+        return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+      }
+
     return (
         <Link href={`/projects/${id}`} passHref>
             <Box
@@ -34,15 +38,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, imageUrl, title }) => {
                             width: '100%',
                             overflow: 'hidden',
                         }}
+                    
                     >
                         <Image
                             src={imageUrl}
                             alt={title}
-                            layout="responsive"
-                            width={16}
-                            height={9}
-                            objectFit="contain" 
+                            width={1600}
+                            height={900}
+                            // sizes="(max-width: 768px) 90vw, 80vw"
+                            style={{objectFit: "contain"}}	
                         />
+
                         <Typography
                             component="div"
                             variant="h5"
