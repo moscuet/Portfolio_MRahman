@@ -18,6 +18,7 @@ export default function Home() {
                         More About Me
                     </Button>
                 </Link>
+
                 <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                     <FollowDownAnimation />
                 </div>
