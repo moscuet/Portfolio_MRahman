@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+@font-face {
+  font-family: 'LinguisticsPro-Regular';
+  src: url('/fonts/LinguisticsPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

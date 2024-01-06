@@ -28,7 +28,7 @@ const Main = () => {
         <Grid container justifyContent="center">
           <Grid item>
             <div className="inline-block my-12">
-              <span className="text-gray-800 text-xl font-bold">
+              <span className="text-gray-900 text-xl font-bold">
                 MY PROJECT
               </span>
             </div>

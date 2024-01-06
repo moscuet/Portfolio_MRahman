@@ -27,9 +27,9 @@ export default function DevelopmentTimeline({ developmentSteps }: { developmentS
     <Box >
       <Grid container spacing={2}>
 
-        <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
-          <Typography variant="h6" component="h2" className="text-gray-800 font-bold text-xl">
-            <TimelineIcon className="mr-2 text-indigo-500" /> Project Timeline
+        <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start mb-3">
+          <Typography variant="h6" component="h2" className="text-gray-900 font-bold text-xl">
+            <TimelineIcon className="mr-2  text-indigo-500" /> Project Timeline
           </Typography>
         </Grid>
 
@@ -38,11 +38,11 @@ export default function DevelopmentTimeline({ developmentSteps }: { developmentS
             {developmentSteps.map((step, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent
-                  sx={{ m: 'auto 0' }}
-                  align="right"
+                  sx={{ m: 'auto 0'}}
+                  align="left"
                   variant="body2"
                   color="text.secondary"
-                  className='p-1 sm:p-3'
+                  className='p-1 sm:p-3 text-center'
                 >
                   {step.date}
                 </TimelineOppositeContent>

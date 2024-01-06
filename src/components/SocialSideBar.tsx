@@ -1,17 +1,28 @@
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import Link from 'next/link';
 
-export default function SocialSidebar() {
+const SocialMediaIcons = ({ className = '' }) => {
   return (
-    <div className="fixed left-0 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 p-1 sm:p-2 md:p-4">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-600">
-        <FaLinkedin size={24} />
-      </a>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-600">
-        <FaGithub size={24} />
-      </a>
-      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-600">
-        <FaInstagram size={24} />
-      </a>
+    <div className={`flex gap-5 ${className}`}>
+      <Link href="https://github.com">
+        <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
+          <FaGithub size="24" />
+        </span>
+      </Link>
+      <Link href="https://linkedin.com">
+        <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
+          <FaLinkedin size="24" />
+        </span>
+      </Link>
+      <Link href="https://instagram.com">
+        <span className="cursor-pointer text-indigo-500 hover:text-indigo-600">
+          <FaInstagram size="24" />
+        </span>
+      </Link>
+
     </div>
   );
-}
+};
+
+export default SocialMediaIcons;

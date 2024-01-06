@@ -19,21 +19,20 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
   };
 
   return (
-
-    <Box border={{border:'2px solid red'}} className="py-5 px-1 sm:px-2 lg:px-4 mb-5 bg-gray-100 rounded-lg shadow-md ">
-
+    <Box className="py-5 px-1 sm:px-2 lg:px-4 mb-5 bg-gray-100 rounded-lg shadow-md ">
 
       <Grid container spacing={2}>
       <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800">Explore the Project</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900">Explore the Project</h2>
+
         </Grid>
 
         <Grid item xs={12} sm={12} md={8} className="flex items-center" style={{ height: '150px' }}>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full justify-center">
 
-
             <Button
               variant="outlined"
+              onClick={handleDemoClick}
               className="border w-full border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
             >
               <span className="sm:hidden">Live Demo</span>
@@ -43,6 +42,7 @@ const ExploreProjectSection = ({ github, url }: { github: string, url: string })
 
             <Button
               variant="outlined"
+              onClick={handleGithubClick}
               className="border w-full border-indigo-500 text-indigo-500 hover:border-indigo-600 hover:text-indigo-600 font-bold py-2 px-4 rounded"
             >
               <span className="sm:hidden">Github</span>

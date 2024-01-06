@@ -1,20 +1,57 @@
-import { Button } from "@mui/material";
+'use client'
+import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import Link from 'next/link';
+import SocialMediaIcons from './SocialSideBar';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="absolute left-0 bg-gray-800 text-gray-300 p-4 w-full">
-      <div className="flex flex-col sm:flex-row justify-between items-center max-w-screen-xl mx-auto px-4 py-4">
-
-        <p className="text-center text-md mb-4 sm:mb-0 mr-1">
-          Crafting seamless web experiences
-        </p>
-        <p className="text-sm text-center font-semibold mb-4 sm:mb-0">
-          © Copyright 2023, Mostafizur Rahman
-        </p>
-        <Button className="hover:bg-gray-600 text-white py-2 px-4 rounded">
-          Get in touch
-        </Button>
+<footer  style={{ background: 'linear-gradient(to bottom, #fff, #e4e7eb )', minHeight: '200px' }} className="absolute w-full left-0 text-gray-900">
+  <div className="container mx-auto px-6 pt-10 pb-6">
+    <div className="flex flex-col sm:flex-row justify-between gap-4">
+      <div className="text-center md:text-left mb-6 md:mb-0">
+        <h5 className="uppercase mb-6 font-bold">Links</h5>
+        <ul className="mb-4">
+          <li className="mt-2">
+            <Link href="/">
+              <span className="hover:underline text-indigo-500 cursor-pointer">Home</span>
+            </Link>
+          </li>
+          <li className="mt-2">
+            <Link href="/about">
+              <span className="hover:underline text-indigo-500 cursor-pointer">About</span>
+            </Link>
+          </li>
+          <li className="mt-2">
+            <Link href="/projects">
+              <span className="hover:underline text-indigo-500 cursor-pointer">Projects</span>
+            </Link>
+          </li>
+        </ul>
       </div>
-    </footer>
+      <div className="text-center mb-6 md:mb-0">
+        <h5 className="uppercase mb-6 font-bold">Social</h5>
+        <SocialMediaIcons className="justify-center" />
+
+      </div>
+      <div className="text-center mb-6 md:mb-0">
+        <h5 className="uppercase mb-6 font-bold">Get in Touch</h5>
+        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+          Contact Me
+        </button>
+      </div>
+    </div>
+  </div>
+  <div className="border-t mt-8 pt-3 text-center">
+    <p className="text-sm font-light text-gray-900">&copy; Copyright 2023, Mostafizur Rahman. All Rights Reserved.</p>
+    <p className="text-sm font-light text-gray-900">Crafting seamless web experiences.</p>
+  </div>
+</footer>
+
+
+  
+  
   );
-}
+};
+
+export default Footer;

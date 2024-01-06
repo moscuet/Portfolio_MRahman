@@ -6,10 +6,7 @@
     color:'red'
   }
   
-  .nav-link:hover {
-    color: #1a202c;
-  }
-  
+
   .nav-link::before {
     content: '';
     position: absolute;
@@ -26,7 +23,7 @@
   }
   
 
-
+  
 
 
   
