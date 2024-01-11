@@ -10,6 +10,9 @@
     "build:functions": "tsc --project ./netlify/functions/tsconfig.json"
   },
   "dependencies": {
+    "@builder.io/dev-tools": "^0.2.7",
+    "@builder.io/react": "^3.1.1",
+    "@builder.io/sdk": "^2.1.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
