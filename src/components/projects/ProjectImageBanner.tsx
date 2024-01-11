@@ -5,6 +5,7 @@ import ImageSlider from '@/components/ImageSlider';
 import FollowDownAnimation from '../FollowDownAnimation';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
+import { ClassNames } from '@emotion/react';
 
 const ProjectImageBanner = ({ title, images, url , github}: { title: string, images: string[], url: string, github:string }) => {
     const handleDemoClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -19,16 +20,15 @@ const ProjectImageBanner = ({ title, images, url , github}: { title: string, ima
 
 
     return (
-        <Grid container direction="column" style={{ minHeight: 'calc(100vh - 120px)', display: 'flex' }}>
-            <Grid style={{  display: 'inline-flex', justifyContent: 'center' }} className="mb-5">
-                <div style={{ maxHeight: 'calc(100vh - 250px)', overflow: 'hidden' }}>
-                    <ImageSlider images={images} url={url} projectName={title} />
-                </div>
+        <Grid container direction="column" >
+            <Grid className='mb-5' >
+                    <ImageSlider images={images}  url={url} projectName={title} />
+                   
             </Grid>
 
+            <Grid  container justifyContent="center" alignItems="center"  >
 
-            <Grid container justifyContent="center" alignItems="center">
-                <Grid item xs={12} style={{ textAlign: 'center' }}>
+                 <Grid item xs={12} style={{ textAlign: 'center' }}>
                     <div className="inline-flex flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
                        
                         <div>
@@ -56,11 +56,7 @@ const ProjectImageBanner = ({ title, images, url , github}: { title: string, ima
                         </div>
 
                     </div>
-                </Grid>
-            </Grid>
-
-            <Grid item style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)' }}>
-                <FollowDownAnimation />
+                </Grid> 
             </Grid>
         </Grid>
     );
