@@ -8,7 +8,7 @@ import ProjectStorySection from '@/components/projects/StorySection';
 import TechStackSection from '@/components/projects/TechStackSection';
 import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
 
-  type ProjectTemplateProps = {
+type ProjectTemplateProps = {
     title: string;
     images: string[];
     github: string;
@@ -17,31 +17,29 @@ import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
     story: string;
     roles: string[];
     developmentSteps: { title: string; date: string }[];
-  };
-  
+};
 
-  
-  const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github, url, techStack, story, roles, developmentSteps }) => {
 
-    const [targetWidth, setTargetWidth] = useState(0);
 
-    useEffect(() => {
-        const targetElement = document.getElementById('project-slider-container');
-        if (targetElement) {
-            setTargetWidth(targetElement.offsetWidth);
-        }
-    }, []);
+const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github, url, techStack, story, roles, developmentSteps }) => {
+
 
     return (
-        <Grid container className="justify-center "  >
-            <ProjecImageBanner
-                title={title}
-                images={images}
-                url={url}
-                github={github}
-            />
-            <Grid container direction="column" className="justify-center" style={{ maxWidth: `calc(${targetWidth}px)`, margin: 'auto'}}>
-                <Grid  item xs={12} mb={6} py={5} mt={5}>
+        <Grid container className="flex flex-col items-center">
+            <Grid item style={{ width: '100%', height: 'calc(100vh - 180px)' }}>
+                <ProjecImageBanner
+                    title={title}
+                    images={images}
+                    url={url}
+                    github={github}
+                />
+            </Grid>
+
+
+            <Grid container item className="flex  flex-col w-full justify-center max-w-5xl" >
+
+
+                <Grid item xs={12} mb={6} py={5} mt={5}>
                     <ProjectStorySection story={story} />
                 </Grid>
 
@@ -53,9 +51,9 @@ import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
                     <MyRoleAndContributions roles={roles} />
                 </Grid>
 
-                <Grid item xs={12} mb={6} py={5}  >
-                    <DevelopmentTimeline developmentSteps ={developmentSteps} />
-                </Grid>
+                {/* <Grid item xs={12} mb={6} py={5}  >
+                    <DevelopmentTimeline developmentSteps={developmentSteps} />
+                </Grid> */}
 
                 <Grid item xs={12} mb={6}  >
                     <ExploreProjectSection github={github} url={url} />

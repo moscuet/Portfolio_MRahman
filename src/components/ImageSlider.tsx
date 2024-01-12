@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import { Paper, Box } from '@mui/material';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import React, { useState, useEffect } from 'react';
+import { Box, IconButton } from '@mui/material';
 import Image from 'next/image';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-const ImageSlider = ({ images, url, projectName }: { images: string[], url: string, projectName: string }) => {
+interface ImageSliderProps {
+    images: string[];
+    url: string,
+    projectName: string
+}
+
+const ImageSlider: React.FC<ImageSliderProps> = ({ images, url, projectName }) => {
     const [current, setCurrent] = useState(0);
     const length = images.length;
 
@@ -12,41 +17,38 @@ const ImageSlider = ({ images, url, projectName }: { images: string[], url: stri
         setCurrent(current === length - 1 ? 0 : current + 1);
     };
 
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 3000);
+        return () => clearInterval(timer);
+    }, [current, nextSlide]);
 
-    if (!Array.isArray(images) || images.length <= 0) {
+    if (!Array.isArray(images) || images.length === 0) {
         return null;
     }
 
     return (
-        <Box id='project-slider-container' sx={{ height: '100%', overflow: 'hidden', position: 'relative' }}>
-            <ArrowBackIosIcon
-                sx={{ position: 'absolute', top: '50%', left: '32px', zIndex: 11, cursor: 'pointer' }}
-                onClick={prevSlide}
-            />
-            <ArrowForwardIosIcon
-                sx={{ position: 'absolute', top: '50%', right: '32px', zIndex: 11, cursor: 'pointer'}}
-                onClick={nextSlide}
-            />
+        <Box  style={{ height:'100%'  }}  sx={{pb:3, position: 'relative', mx: 'auto', overflow: 'hidden' }}>
             {images.map((image, index) => (
-                <Paper key={index} elevation={3} className={`${index === current ? 'block' : 'hidden'}`} sx={{ padding: 2, textAlign: 'center', maxWidth: '100%', height: '100%', position: 'relative' }}>
+                <div key={index} style={{ display: index === current ? 'block' : 'none', height: '100%', position: 'relative' 
+            }}>
                     <Image
-                      src={image}
-                      alt={`Slide ${index}`}
-                      width={1600}
-                      height={900}
-                      layout='responsive'
-                      style={{objectFit: "contain"}}
+                        src={image}
+                        alt={`Slide ${index}`}
+                        layout='fill'
+                        objectFit="contain"
                     />
-                </Paper>
+                </div>
             ))}
+
+            <Box sx={{ position: 'absolute', bottom: '-2px', left: '50%', transform: 'translateX(-50%)', display: 'flex' }}>
+                {images.map((_, idx) => (
+                    <IconButton key={idx} onClick={() => setCurrent(idx)} sx={{ padding: 0, color: current === idx ? 'primary.main' : 'grey.500' }}>
+                        <FiberManualRecordIcon fontSize="small" />
+                    </IconButton>
+                ))}
+            </Box>
         </Box>
     );
 };
 
-
 export default ImageSlider;
-
-
