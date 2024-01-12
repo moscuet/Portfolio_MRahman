@@ -58,6 +58,7 @@ const ProjectImageBanner = ({ title, images, url , github}: { title: string, ima
                 </Grid> 
             </Grid>
         </Grid>
+              </Grid>
     );
 };
 
