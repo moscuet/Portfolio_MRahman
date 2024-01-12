@@ -13,11 +13,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, url, projectName }) =
     const [current, setCurrent] = useState(0);
     const length = images.length;
 
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
+ 
 
     useEffect(() => {
+           const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
         const timer = setInterval(nextSlide, 3000);
         return () => clearInterval(timer);
     }, [current, nextSlide]);
