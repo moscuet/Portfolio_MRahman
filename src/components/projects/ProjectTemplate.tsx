@@ -20,21 +20,13 @@ type ProjectTemplateProps = {
 };
 
 
-
 const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github, url, techStack, story, roles, developmentSteps }) => {
 
-    const [targetWidth, setTargetWidth] = useState(0);
-
-    useEffect(() => {
-        const targetElement = document.getElementById('project-slider-container');
-        if (targetElement) {
-            setTargetWidth(targetElement.offsetWidth);
-        }
-    }, []);
 
     return (
-        <Grid container className=" flex flex-col justify-center "  >
-            <Grid item >
+        <Grid container className="flex flex-col items-center">
+            <Grid item style={{ width: '100%', height: 'calc(100vh - 180px)' }}>
+
                 <ProjecImageBanner
                     title={title}
                     images={images}
@@ -42,13 +34,11 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github
                     github={github}
                 />
             </Grid>
-           
 
 
-            <Grid item container direction="column" className="flex w-full justify-center" style={{ maxWidth: `calc(${targetWidth}px)`, margin: 'auto' }}>
-               
-            
-            <Grid item xs={12} mb={6} py={5} mt={5}>
+            <Grid container item className="flex  flex-col w-full justify-center max-w-5xl" >
+
+                <Grid item xs={12} mb={6} py={5} mt={5}>
                     <ProjectStorySection story={story} />
                 </Grid>
 
@@ -60,9 +50,9 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github
                     <MyRoleAndContributions roles={roles} />
                 </Grid>
 
-                <Grid item xs={12} mb={6} py={5}  >
+                {/* <Grid item xs={12} mb={6} py={5}  >
                     <DevelopmentTimeline developmentSteps={developmentSteps} />
-                </Grid>
+                </Grid> */}
 
                 <Grid item xs={12} mb={6}  >
                     <ExploreProjectSection github={github} url={url} />
