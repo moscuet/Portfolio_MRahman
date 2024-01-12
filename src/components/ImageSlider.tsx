@@ -13,14 +13,16 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, url, projectName }) =
     const [current, setCurrent] = useState(0);
     const length = images.length;
 
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
+ 
 
     useEffect(() => {
+
+           const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
         const timer = setInterval(nextSlide, 3000);
         return () => clearInterval(timer);
-    }, [current, nextSlide]);
+    }, [current]);
 
     if (!Array.isArray(images) || images.length === 0) {
         return null;
@@ -35,12 +37,14 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, url, projectName }) =
                         src={image}
                         alt={`Slide ${index}`}
                         layout='fill'
+
                         objectFit="contain"
                     />
                 </div>
             ))}
 
             <Box sx={{ position: 'absolute', bottom: '-2px', left: '50%', transform: 'translateX(-50%)', display: 'flex' }}>
+
                 {images.map((_, idx) => (
                     <IconButton key={idx} onClick={() => setCurrent(idx)} sx={{ padding: 0, color: current === idx ? 'primary.main' : 'grey.500' }}>
                         <FiberManualRecordIcon fontSize="small" />

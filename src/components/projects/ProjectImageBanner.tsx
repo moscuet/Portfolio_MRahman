@@ -23,10 +23,9 @@ const ProjectImageBanner = ({ title, images, url , github}: { title: string, ima
         <Grid  style={{height:'100%' }} container direction="column" >
             <Grid style={{ width:'100%', height:'100%' }} >
                     <ImageSlider images={images}  url={url} projectName={title} />
-                   
             </Grid>
-
             <Grid  container justifyContent="center" alignItems="center" className='max-w-3xl'  >
+             <Grid  container justifyContent="center" alignItems="center"  >
 
                  <Grid item xs={12} style={{ textAlign: 'center' }}>
                     <div className="inline-flex flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
