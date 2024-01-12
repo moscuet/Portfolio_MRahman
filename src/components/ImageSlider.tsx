@@ -21,7 +21,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, url, projectName }) =
     };
         const timer = setInterval(nextSlide, 3000);
         return () => clearInterval(timer);
-    }, [current, nextSlide]);
+    }, [current]);
 
     if (!Array.isArray(images) || images.length === 0) {
         return null;
