@@ -12,7 +12,8 @@ export default function Home() {
                     Hi, I am Rahman
                 </h1>
                 <p className="text-base md:text-xl lg:text-xl text-gray-800 text-center mt-4 px-20">
-                I am a Full-Stack Developer from Helsinki. Coding is my passion, and I love to build with a keen eye for details and functionality.                </p>
+                    I am a Full-Stack Developer from Helsinki. Coding is my passion, and I love to build with a keen eye for details and functionality.
+                </p>
                 <Link href="/about" passHref>
                     <Button variant="primary" className='my-6'>
                         More About Me

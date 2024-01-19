@@ -1,27 +1,15 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
-import DevelopmentTimeline from '@/components/projects/TimeLine';
 import MyRoleAndContributions from '@/components/projects/MyRoleAndContribution';
 import ExploreProjectSection from '@/components/projects/ExploreProjectSection';
 import ProjectStorySection from '@/components/projects/StorySection';
 import TechStackSection from '@/components/projects/TechStackSection';
 import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
 
-type ProjectTemplateProps = {
-    title: string;
-    images: string[];
-    github: string;
-    url: string;
-    techStack: string[];
-    story: string;
-    roles: string[];
-    developmentSteps: { title: string; date: string }[];
-};
 
 
-
-const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ title, images, github, url, techStack, story, roles, developmentSteps }) => {
+const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, techStack, story, roles }) => {
 
 
     return (

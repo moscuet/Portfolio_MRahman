@@ -4,18 +4,13 @@ import { Grid } from '@mui/material';
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { Button } from './ui/Button';
+import { projectList } from '../../data/projectData';
 
 
 export default function ProjectSection() {
   const [showAll, setShowAll] = useState(false);
+const {projects } = projectList
 
-  const projects = [
-    { id: 'business-intelligence', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
-    { id: 'cooking-recipe', imageUrl: "/assets/images/business_Intelligence_02.png", title: "My Awesome Project" },
-    { id: 'business-intelligence2', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
-    { id: 'business-intelligence3', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
-    { id: 'business-intelligence4', imageUrl: "/assets/images/business_Intelligence_01.png", title: "My Awesome Project" },
-  ];
 
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
@@ -38,8 +33,9 @@ export default function ProjectSection() {
           <Grid key={project.id} item xs={12} sm={6} md={6} lg={6}>
             <ProjectCard
               id={project.id}
-              imageUrl={project.imageUrl}
+              imageUrl={`/assets/images/${project.imageUrl}`}
               title={project.title}
+              skillsIcon={project.skillsIcon || undefined}
             />
           </Grid>
         ))}

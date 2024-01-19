@@ -1,6 +1,7 @@
 const nextConfig = {
-    distDir: 'dist',
-    images: {
-      unoptimized: true
-    },
-  };
+  distDir: 'dist',
+  images: {
+    unoptimized: true,
+    domains: ['skillicons.dev'],
+  },
+};
