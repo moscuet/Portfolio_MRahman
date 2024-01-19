@@ -22,6 +22,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
         return () => clearInterval(timer);
     }, [current,length]);
 
+
     if (!Array.isArray(images) || images.length === 0) {
         return null;
     }
@@ -58,6 +59,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             <Box sx={{ position: 'absolute', bottom: '-2px', left: '50%', transform: 'translateX(-50%)', display: 'flex' }}>
                 {images.map((_, idx) => (
                     <IconButton key={idx} onClick={() => setCurrent(idx)} sx={{ padding: 0, color: current === idx ? 'primary.main' : 'grey.500', opacity: current === idx ? 1 : 0.3 }}>
+
                         <FiberManualRecordIcon fontSize="small" />
                     </IconButton>
                 ))}

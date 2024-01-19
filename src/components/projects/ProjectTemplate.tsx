@@ -12,9 +12,11 @@ import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
 const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, techStack, story, roles }) => {
 
 
+
     return (
         <Grid container className="flex flex-col items-center">
             <Grid item style={{ width: '100%', height: 'calc(100vh - 180px)' }}>
+
                 <ProjecImageBanner
                     title={title}
                     images={images}
@@ -45,7 +47,7 @@ const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, te
 
                 <Grid item xs={12} mb={6}  >
                     <ExploreProjectSection github={github} url={url} />
-                </Grid>
+                </Grid> 
             </Grid>
         </Grid>
     );
