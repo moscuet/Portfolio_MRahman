@@ -1,0 +1,216 @@
+.bg-bubbles {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        width: 40px;
+        height: 40px;
+        top:-100px;
+        -webkit-animation: square 25s infinite;
+        animation: square 25s infinite;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+
+        &:nth-child(1) {
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            border-radius: 0 50% 50% 50%;
+            animation-delay: 1s;
+            animation-duration: 26s;
+            background-color: rgb(127, 4, 4, .1);
+        }
+
+        &:nth-child(2) {
+            left: 15%;
+            width: 80px;
+            height: 80px;
+            border-radius: 25% 75% 50% 50%;
+            animation-delay: 2s;
+            animation-duration: 31s;
+            background-color: rgb(100, 149, 237, .15);        }
+
+        &:nth-child(3) {
+            left: 20%;
+            border-radius: 0 0 50% 50%;
+            animation-delay: 4s;
+            animation-duration: 30s;
+            background-color: rgb(60, 179, 113, .15)        }
+
+        &:nth-child(4) {
+            left: 25%;
+            width: 60px;
+            height: 60px;
+            background-color: fade(rgb(125, 17, 17), 25%);
+            border-radius: 0 0 50% 50%;
+            animation-delay: 4s;
+            animation-duration: 26s;
+            background-color: rgb(147, 112, 219, .15);
+        }
+
+        /* &:nth-child(5) {
+            left: 30%;
+            border-radius: 50% 0 0 50%;
+            animation-delay: 6s;
+            animation-duration: 22s;
+            background-color: rgb(127, 4, 4, .15);
+        } */
+
+        /* &:nth-child(6) {
+            left: 35%;
+            width: 50px;
+            height: 70px;
+            background-color: rgb(127, 4, 4, .15);
+            border-radius: 25% 25% 50% 50%;
+            animation-delay: 8s;
+            animation-duration: 18s;
+        } */
+        &:nth-child(7) {
+            left: 40%;
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-top: 70px solid rgb(127, 4, 4, .15); /* This creates the upward triangle */
+            animation-duration: 17s;
+        }
+        
+        
+/*         
+        &:nth-child(8) {
+            left: 45%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation-delay: 4s;
+            animation-duration: 23s;
+            background-color: rgb(127, 4, 4, .15);
+        }
+
+        &:nth-child(9) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            animation-delay: 6s;
+            animation-duration: 13s;
+            background-color: rgb(127, 4, 4, .15);
+        } */
+
+        &:nth-child(10) {
+            left: 55%;
+            width: 80px;
+            height: 80px;
+            border-radius: 0 50% 50% 50%;
+            animation-delay: 8s;
+            animation-duration: 26s;
+            background-color: rgb(127, 4, 4, .15);
+        }
+
+        &:nth-child(11) {
+            left: 60%;
+            width: 30;
+            height: 50;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 69.28px solid rgb(127, 4, 4, .15);
+            animation-duration: 21s;
+            animation-delay: 2s;
+            background-color: rgb(127, 4, 4, .15);
+        }
+    
+        &:nth-child(12) {
+            left: 65%;
+            width: 70px;
+            height: 40px;
+            background-color: rgb(127, 4, 4, .15);
+            border-radius: 0 0 50% 50%;
+            transform: rotate(0deg);
+            animation-delay: 4s;
+            animation-duration: 17s;
+    
+        }
+    
+        &:nth-child(13) {
+            left: 70%;
+            width: 60px;
+            height: 20px;
+            background: radial-gradient(circle at center, transparent 0%, rgb(127, 4, 4, .15) 100%);
+            border-radius: 50%;
+            animation-duration: 21s;
+            animation-delay: 6s;
+    
+        }
+    
+        &:nth-child(14) {
+            left: 75%;
+            width: 40px;
+            height: 80px;
+            background-color: rgb(127, 4, 4, .15);
+            border-radius: 50%;
+            box-shadow: 15px 0 0 0 rgb(127, 4, 4, .15);
+            animation-duration: 30s;
+        }
+    
+        &:nth-child(15) {
+            left: 80%;
+            width: 50;
+            height: 50;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid rgb(127, 4, 4, .15);
+            animation-delay: 8s;
+            animation-duration: 24s;
+    
+        }
+
+        &:nth-child(16) {
+            left: 85%;
+            width: 50px;
+            height: 80px;
+            background: linear-gradient(45deg, rgb(0, 128, 0, .15), rgb(255, 0, 0, .15));
+            border-radius: 50%;
+            animation-duration: 19s;
+            animation-delay: 6s;
+        }
+        &:nth-child(17) {
+            left: 90%;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid rgb(0, 0, 255, .15);
+            animation-delay: 3s;
+            animation-duration: 27s;
+        }
+        
+    }
+
+}
+
+
+
+
+
+@-webkit-keyframes square {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(600deg);
+    }
+}
+
+@keyframes square {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(600deg);
+    }
+}
