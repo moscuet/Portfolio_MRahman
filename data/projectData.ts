@@ -2,21 +2,26 @@ export const projectList = {
     projects: [
         {
             id: 'business-intelligence',
-            imageUrl: "business_Intelligence_01.png",
             title: "Business Intelligence website",
             skillsIcon: 'business_Intelligence.svg',
-            intro: 'Collaborative development with a team and an external designer, utilizing a tech stack including Gatsby.js, GraphQL, Figma, Contentful, Mailchimp, and Netlify'
+            intro: 'Team Collaboration with an External Designer, Employing a Tech Stack Featuring Gatsby, GraphQL, Figma, Contentful, Mailchimp, Netlify..',
+            imageUrl: "business_Intelligence_01.png",
         },
         {
-            title: "Library API (REST)",
             id: 'library-api',
+            title: "Library API (REST)",
+            skillsIcon: 'library_api.svg',
+            skillsIconText:'Open API',
+            intro:'Backend app, designed for book borrowing services, was developed using TypeScript, Node.js, Express, and MongoDB as part of a full-stack training project.',
             imageUrl: "library_api_01.png",
         },
         {
             id: 'text-similarity-api',
             imageUrl: "text_similarity_api_01.png",
-            title: "Text Similarity Api", skillsIcon: 'text_similarity_api.svg',
-            skillsIconText: 'OpenAI | Google Auth'
+            title: "Text Similarity Api",
+            skillsIcon: 'text_similarity_api.svg',
+            skillsIconText: 'OpenAI | Google Auth',
+            intro:' a full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
         },
     ]
 }

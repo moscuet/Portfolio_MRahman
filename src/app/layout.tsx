@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ border: '2px solid red' }}>
+      <body className={inter.className} >
         <div className="pl-6 pr-3 sm:px-12 min-h-screen bg-gray-200">
           <Toaster position='bottom-right' />
           <NavBar />
