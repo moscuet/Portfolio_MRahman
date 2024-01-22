@@ -4,20 +4,20 @@ import ProjectTemplate from './ProjectTemplate';
 
 
 
-  const ProjectDetails = (project:ProjectType) => {
-    const {id,title, images,github, url, techStack, story, roles, developmentSteps} = project
-    return (
-      <ProjectTemplate
-        title={title}
-        images={images}
-        github={github}
-        url={url}
-        techStack={techStack}
-        story={story}
-        roles={roles}
-        developmentSteps={developmentSteps} id={id}        />
-    );
-  };
-  
-  export default ProjectDetails;
-  
+const ProjectDetails = (project: ProjectType) => {
+  const { id, title, images, github, url, techStack, story, roles, developmentSteps } = project
+  return (
+    <ProjectTemplate
+      id={id}
+      title={title}
+      images={images}
+      github={github}
+      url={url}
+      techStack={techStack}
+      story={story}
+      roles={roles}
+      developmentSteps={developmentSteps} />
+  );
+};
+
+export default ProjectDetails;

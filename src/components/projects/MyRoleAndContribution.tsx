@@ -13,7 +13,7 @@ const MyRoleAndContributions = ({ roles }: { roles: string[] }) => {
                             < LeaderboardIcon className="mr-2 text-indigo-500" /> My Role &
                         </Typography>
                         <Typography variant="h6" component="h2" className="text-gray-900 font-bold text-xl">
-                            Contributions
+                            Key Achievements
                         </Typography>
                     </div>
                 </Grid>
@@ -23,8 +23,11 @@ const MyRoleAndContributions = ({ roles }: { roles: string[] }) => {
                         {roles.map((item, index) => (
                             <li key={index} className="text-base md:text-xl lg:text-lg text-gray-900 mt-2 flex">
                                 <span className="w-4 h-4 mt-1 sm:mt-2 bg-indigo-500 rounded-full mr-3 border-4 border-gray-400 flex-shrink-0 self-start"></span>
-                                <p className="flex-1">{item}</p>
+                                <div className="flex-1">
+                                    <strong>{item.split(' - ')[0]}</strong> - <span>{item.split(' - ').slice(1).join(' - ')}</span>
+                                </div>
                             </li>
+
                         ))}
                     </ul>
                 </Grid>

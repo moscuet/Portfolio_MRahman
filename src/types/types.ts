@@ -21,4 +21,6 @@ interface ProjectList {
   imageUrl: string;
   title: string;
   skillsIcon?: string;
+  skillsIconText?: string;
+  intro?:string;
 }

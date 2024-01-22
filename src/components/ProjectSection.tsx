@@ -36,6 +36,8 @@ const {projects } = projectList
               imageUrl={`/assets/images/${project.imageUrl}`}
               title={project.title}
               skillsIcon={project.skillsIcon || undefined}
+              skillsIconText={project.skillsIconText || undefined}
+              intro={project.intro}
             />
           </Grid>
         ))}
