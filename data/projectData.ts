@@ -62,22 +62,22 @@ export const projectsData: ProjectType[] = [
             {
                 title: 'User Dashboard',
                 description: 'A personalized space where users can manage their book borrowings, update personal information, and view their borrowing history.',
-                img: 'image_link_dashboard.png'
+                img: 'lending_loft_01.png'
             },
             {
                 title: 'Admin Management Panel',
                 description: 'Enables administrators to add new books, manage authors, track borrowing statuses, and handle user accounts.',
-                img: 'image_link_admin_panel.png'
+                img: 'lending_loft_02.png'
             },
             {
                 title: 'Secure Authentication',
                 description: 'Features JWT authentication to ensure secure access for users and protect sensitive data.',
-                img: 'image_link_authentication.png'
+                img: 'lending_loft_03.png'
             },
             {
                 title: 'Interactive Book Browsing',
                 description: 'Users can browse and select books with ease, add them to their cart, and manage their borrowings seamlessly.',
-                img: 'image_link_book_browsing.png'
+                img: 'lending_loft_04.png'
             }
         ],
 

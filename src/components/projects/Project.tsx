@@ -5,7 +5,7 @@ import ProjectTemplate from './ProjectTemplate';
 
 
 const ProjectDetails = (project: ProjectType) => {
-  const { id, title, images, github, url, techStack, story, roles, developmentSteps } = project
+  const { id, title, images, github, url, techStack, story, roles, developmentSteps, features } = project
   return (
     <ProjectTemplate
       id={id}
@@ -16,7 +16,10 @@ const ProjectDetails = (project: ProjectType) => {
       techStack={techStack}
       story={story}
       roles={roles}
-      developmentSteps={developmentSteps} />
+      developmentSteps={developmentSteps}
+      features={features}
+    />
+
   );
 };
 

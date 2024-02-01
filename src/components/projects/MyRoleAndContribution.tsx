@@ -6,9 +6,9 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 const MyRoleAndContributions = ({ roles }: { roles: string[] }) => {
     return (
         <Box >
-            <Grid container spacing={2} alignItems="center">
-                <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
-                    <div className="flex flex-col ">
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={12} md={4} className="flex justify-center lg:justify-start">
+                    <div className="flex flex-col pt-4 ">
                         <Typography variant="h6" component="h2" className="text-gray-900 font-bold text-xl">
                             < LeaderboardIcon className="mr-2 text-indigo-500" /> My Role &
                         </Typography>

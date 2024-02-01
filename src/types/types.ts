@@ -4,6 +4,9 @@ interface DevelopmentStep {
   date: string;
 }
 
+type ProjectFeature ={
+  title:string, description:string, img:string
+}
 interface ProjectType {
   id: string;
   title: string;
@@ -13,7 +16,7 @@ interface ProjectType {
   techStack: string[];
   story: string;
   roles: string[];
-  features?:{title:string, description:string, img:string}[]
+  features?:ProjectFeature[]
   developmentSteps?: DevelopmentStep[];
 }
 

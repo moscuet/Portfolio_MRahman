@@ -6,10 +6,11 @@ import ExploreProjectSection from '@/components/projects/ExploreProjectSection';
 import ProjectStorySection from '@/components/projects/StorySection';
 import TechStackSection from '@/components/projects/TechStackSection';
 import ProjecImageBanner from '@/components/projects/ProjectImageBanner';
+import ProjectFeatures from './ProjectFeatures';
 
 
 
-const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, techStack, story, roles }) => {
+const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, techStack, story, roles, features }) => {
 
 
     return (
@@ -23,9 +24,7 @@ const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, te
                 />
             </Grid>
 
-
             <Grid container item className="flex  flex-col w-full justify-center max-w-5xl" >
-
 
                 <Grid item xs={12} mb={6} py={5} mt={5}>
                     <ProjectStorySection story={story} />
@@ -34,6 +33,9 @@ const ProjectTemplate: React.FC<ProjectType> = ({ title, images, github, url, te
                 <Grid item xs={12} mb={6} py={5}  >
                     <TechStackSection techStack={techStack} />
                 </Grid>
+               {features && <Grid item xs={12} mb={6} py={5}  >
+                    <ProjectFeatures features={features}/>
+                </Grid>}
 
                 <Grid item xs={12} mb={6} py={5}  >
                     <MyRoleAndContributions roles={roles} />

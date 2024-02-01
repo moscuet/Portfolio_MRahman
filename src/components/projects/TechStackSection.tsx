@@ -6,8 +6,8 @@ import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 const TechStackSection = ({ techStack }: { techStack: string[] }) => {
   return (
     <Box >
-      <Grid container spacing={2} alignItems="center" className='text-gray-900'>
-      <Grid item xs={12} sm={12} md={4} className="flex items-center justify-center lg:justify-start">
+      <Grid container spacing={2} className='text-gray-900'>
+      <Grid item xs={12} sm={12} md={4} className="flex justify-center lg:justify-start">
         <DeveloperModeIcon className="mr-2 text-indigo-500" />
         <h2 className=" font-bold text-xl">Tech Stack</h2>
         </Grid>
