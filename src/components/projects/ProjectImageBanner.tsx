@@ -22,13 +22,12 @@ const ProjectImageBanner = ({ title, images, url, github }: { title: string, ima
                 <ImageSlider images={images} url={url} projectName={title} />
             </div>
             <div className='max-w-3xl mt-5'  >
-                <div className="inline-flex flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
+                <div className="flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
 
-                    <div>
+                    <div className='flex justify-center '>
                         <span className="text-indigo-500 font-bold">
                             {title}
                         </span>
-                        <div className="hidden md:inline-block h-3 w-0.5 bg-indigo-500 mx-3" ></div>
                     </div>
 
                     <div>
@@ -36,13 +35,19 @@ const ProjectImageBanner = ({ title, images, url, github }: { title: string, ima
                             <div onClick={handleGithubClick} className="text-indigo-500 hover:text-blue-800 font-bold no-underline cursor-pointer inline-flex items-center">
                                 Github Repo
                                 <ArrowForwardIcon style={{ transform: 'rotate(-45deg)' }} />
-
                             </div>
                         </Link>
                         <div className="inline-block h-3 w-0.5 bg-indigo-500 mx-3" ></div>
                         <Link href={url} passHref>
                             <div onClick={handleDemoClick} className="text-indigo-500 hover:text-blue-800 font-bold no-underline cursor-pointer inline-flex items-center">
                                 Live Demo
+                                <ArrowForwardIcon style={{ transform: 'rotate(-45deg)' }} />
+                            </div>
+                        </Link>
+                        <div className="inline-block h-3 w-0.5 bg-indigo-500 mx-3" ></div>
+                        <Link href={'/#project-section'} passHref>
+                            <div className="text-indigo-500 hover:text-blue-800 font-bold no-underline cursor-pointer inline-flex items-center">
+                                Back To Projects
                                 <ArrowForwardIcon style={{ transform: 'rotate(-45deg)' }} />
                             </div>
                         </Link>

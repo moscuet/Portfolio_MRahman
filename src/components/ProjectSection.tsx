@@ -30,7 +30,7 @@ const {projects } = projectList
 
       <Grid container spacing={1} justifyContent="center" style={{ padding: '0 20px' }}>
         {displayedProjects.map(project => (
-          <Grid key={project.id} item xs={12} md={6} lg={6}>
+          <Grid className={project.id} key={project.id} item xs={12} md={6} lg={6}>
             <ProjectCard
               id={project.id}
               imageUrl={`/assets/images/${project.imageUrl}`}

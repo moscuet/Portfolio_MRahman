@@ -6,7 +6,7 @@ export function GET(request: Request, context: any) {
     const id = parseInt(context.params.id);
     const projects = projectsData.projects;
     const project = projects.find((project) => project.id === id);
-
+   console.log('project',project)
     if (project) {
         return NextResponse.json(project, { status: 200 });
     } else {

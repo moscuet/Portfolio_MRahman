@@ -13,6 +13,7 @@ interface ProjectType {
   techStack: string[];
   story: string;
   roles: string[];
+  features?:{title:string, description:string, img:string}[]
   developmentSteps?: DevelopmentStep[];
 }
 

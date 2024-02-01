@@ -1,5 +1,23 @@
 export const projectList = {
     projects: [
+
+        {
+            id: 'lending-loft',
+            title: "Lending Loft: Library Management",
+            skillsIcon: 'lending_loft.svg',
+            skillsIconText: 'Netlify l JWT Authentication',
+
+            intro: 'A Front-end book borrowing App, developed with TypeScript, React, Redux, React-Bootstrap & JWT auth. Integrated with a Node.js & Express backend & MongoDB.',
+            imageUrl: "lending_loft_01.png",
+        },
+        {
+            id: 'library-api',
+            title: "Library API (REST)",
+            skillsIcon: 'library_api.svg',
+            skillsIconText: 'Open API',
+            intro: 'Backend app, designed for book borrowing services, was developed using TypeScript, Node.js, Express, and MongoDB as part of a full-stack training project.',
+            imageUrl: "library_api_01.png",
+        },
         {
             id: 'business-intelligence',
             title: "Business Intelligence website",
@@ -8,25 +26,68 @@ export const projectList = {
             imageUrl: "business_Intelligence_01.png",
         },
         {
-            id: 'library-api',
-            title: "Library API (REST)",
-            skillsIcon: 'library_api.svg',
-            skillsIconText:'Open API',
-            intro:'Backend app, designed for book borrowing services, was developed using TypeScript, Node.js, Express, and MongoDB as part of a full-stack training project.',
-            imageUrl: "library_api_01.png",
-        },
-        {
             id: 'text-similarity-api',
             imageUrl: "text_similarity_api_01.png",
             title: "Text Similarity Api",
             skillsIcon: 'text_similarity_api.svg',
-            skillsIconText: 'OpenAI | Google Auth',
-            intro:' a full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
+            skillsIconText: 'OpenAI l Google Auth',
+            intro: ' a full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
         },
+
     ]
 }
 
+
+
 export const projectsData: ProjectType[] = [
+    {
+        id: 'lending-loft',
+        title: 'Lending Loft: Library Management',
+        images: [
+            'lending_loft_01.png',
+            'lending_loft_02.png',
+            'lending_loft_03.png',
+            'lending_loft_04.png',
+        ],
+        github: 'https://github.com/moscuet/Lending-Loft',
+        url: 'https://zealous-galileo-0290aa.netlify.app/',
+        techStack: ['TypeScript', 'React', 'Redux', 'React-Bootstrap', 'JWT', 'Formik-form', 'Yup validation', 'Mongoose'],
+        story: "Lending Loft is a front-end application designed to streamline the book borrowing experience in libraries. The app features a user-friendly interface built with TypeScript, React, Redux, and React-Bootstrap, and integrates with a backend using Node.js, Express, and MongoDB. It includes secure JWT authentication for user security. Developed to showcase modern web development techniques and efficient library management, Lending Loft is a demonstration of the capabilities of full-stack development in real-world applications.",
+        roles: [
+            'Frontend Development - Created a dynamic user interface with TypeScript, React, Redux, and React-Bootstrap.',
+            'Backend Integration - Integrated with a Node.js and Express backend',
+            'Security Implementation - Ensured user security with JWT authentication.',
+        ],
+        features: [
+            {
+                title: 'User Dashboard',
+                description: 'A personalized space where users can manage their book borrowings, update personal information, and view their borrowing history.',
+                img: 'image_link_dashboard.png'
+            },
+            {
+                title: 'Admin Management Panel',
+                description: 'Enables administrators to add new books, manage authors, track borrowing statuses, and handle user accounts.',
+                img: 'image_link_admin_panel.png'
+            },
+            {
+                title: 'Secure Authentication',
+                description: 'Features JWT authentication to ensure secure access for users and protect sensitive data.',
+                img: 'image_link_authentication.png'
+            },
+            {
+                title: 'Interactive Book Browsing',
+                description: 'Users can browse and select books with ease, add them to their cart, and manage their borrowings seamlessly.',
+                img: 'image_link_book_browsing.png'
+            }
+        ],
+
+        developmentSteps: [
+            { title: 'Conceptualization', date: 'DD.MM.YYYY' },
+            { title: 'Design & Development', date: 'DD.MM.YYYY' },
+            { title: 'Integration & Testing', date: 'DD.MM.YYYY' },
+            { title: 'Deployment', date: 'DD.MM.YYYY' },
+        ]
+    },
     {
         id: 'business-intelligence',
         title: 'Business Intelligence Website',
