@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4164cd0-a225-40fb-b411-fb4725ba8d5e/deploy-status)](https://app.netlify.com/sites/vocal-dasik-fc628a/deploys)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
