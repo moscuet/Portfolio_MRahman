@@ -1,9 +1,9 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next" 
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "out_functions" # or wherever your built serverless functions are located
+  directory = "netlify/functions"
