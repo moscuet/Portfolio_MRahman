@@ -30,7 +30,8 @@ export default function ProjectFeatures({
                   variant="h6"
                   component="h3"
                   className="font-bold text-center"
-                  sx={{ mt: 3, mb: 3 }}
+                  sx={{ mt:4, mb: 2, color:'green' }}
+
                 >
                   {feature.title}
                 </Typography>
