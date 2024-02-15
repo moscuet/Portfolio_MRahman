@@ -11,10 +11,6 @@ import '../styles/detailsbutton.css'
 const ProjectCard: React.FC<ProjectList> = ({ id, imageUrl, title, skillsIcon, skillsIconText, intro }) => {
     const [isHovered, setIsHovered] = useState(false);
 
-    const imageLoader = ({ src, width, quality }: { src: ImageLoader, width: string, quality: string }) => {
-        return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-    }
-
     return (
         <Box
             sx={{
