@@ -18,9 +18,9 @@ const ProjectImageBanner = ({ title, images, url, github }: { title: string, ima
 
     return (
         <div className="flex flex-col h-full items-center">
-            <div className='w-full h-full' >
+<div className='w-full h-full' >
                 <ImageSlider images={images} url={url} projectName={title} />
-            </div>
+           </div>
             <div className='max-w-3xl mt-5'  >
                 <div className="flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
 
@@ -47,7 +47,6 @@ const ProjectImageBanner = ({ title, images, url, github }: { title: string, ima
                             </div>
                         </Link>
 
-                        {/* Divider hidden on smaller screens */}
                         <div className="hidden sm:inline-block h-3 w-0.5 bg-indigo-500 mx-3"></div>
 
                         <Link className='mt-2' href={'/#project-section'} passHref>
