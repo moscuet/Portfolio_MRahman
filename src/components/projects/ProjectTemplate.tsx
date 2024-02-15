@@ -19,7 +19,8 @@ const ProjectTemplate: React.FC<ProjectType> = ({
   features,
 }) => {
   return (
-    <Grid container className="flex flex-col items-center">
+    <Grid container   className="flex w-full flex-col items-center justify-center" 
+    >
       <Grid
         item
         sx={{
@@ -40,7 +41,8 @@ const ProjectTemplate: React.FC<ProjectType> = ({
       <Grid
         container
         item
-        className="flex  flex-col w-full justify-center max-w-5xl"
+
+        className="flex flex-col w-full justify-center max-w-5xl"
       >
         <Grid item xs={12} mb={6} py={5} mt={5}>
           <ProjectStorySection story={story} />
@@ -50,12 +52,12 @@ const ProjectTemplate: React.FC<ProjectType> = ({
           <TechStackSection techStack={techStack} />
         </Grid>
         {features && (
-          <Grid item xs={12} mb={6} py={5}>
+          <Grid item xs={12} mb={6} pt={5} pb={10}>
             <ProjectFeatures features={features} />
           </Grid>
         )}
 
-        <Grid item xs={12} mb={6} py={5}>
+        <Grid item xs={12} mb={6} pb={5}>
           <MyRoleAndContributions roles={roles} />
         </Grid>
 

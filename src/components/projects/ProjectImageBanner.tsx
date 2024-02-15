@@ -25,7 +25,7 @@ const ProjectImageBanner = ({ title, images, url, github }: { title: string, ima
                 <div className="flex-col items-center justify-center gap-4 md:gap-0 md:flex-row ">
 
                     <div className='flex justify-center '>
-                        <span className="text-indigo-500 font-bold">
+                        <span className="font-bold text-gray-900">
                             {title}
                         </span>
                     </div>
