@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import SocialMediaIcons from './SocialSideBar';
 import { Button } from './ui/Button';
+import { Box } from '@mui/material';
 
 const Footer = () => {
   return (
@@ -30,12 +31,14 @@ const Footer = () => {
           </div>
           <div className="text-center mb-6 md:mb-0">
             <h5 className="uppercase mb-6 font-bold">Get in Touch</h5>
-
+            <Box display="flex" justifyContent="center" alignItems="center">
             <Link href="/contact" passHref>
               <Button variant="primary" size="default">
                 Contact me
               </Button>
             </Link>
+            </Box>
+
           </div>
         </div>
       </div>

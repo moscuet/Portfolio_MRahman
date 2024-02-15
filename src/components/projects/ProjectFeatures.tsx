@@ -16,39 +16,39 @@ export default function ProjectFeatures({
           xs={12}
           sm={12}
           md={4}
+          sx={{ paddingBottom: 10 }}
           className="flex md:items-start items-center justify-center lg:justify-start"
         >
-          <FeatureListIcon className="mr-2 text-indigo-500" />
-          <h2 className="font-bold text-xl">Project Features</h2>
+          <Box
+            sx={{
+              position: "sticky",
+              top: 150,
+              zIndex: 1,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <FeatureListIcon className="mr-2 text-indigo-500" />
+            <h2 className="font-bold text-xl">Project Features</h2>
+          </Box>
         </Grid>
 
         <Grid item xs={12} sm={12} md={8} className="rounded-lg p-4">
-          <div className="flex flex-wrap justify-center bg-gray-300">
+          <div className="flex flex-wrap justify-center bg-gray-50 border rounded-md">
             {features.map((feature, index) => (
               <Box key={index} className="rounded w-full md:w-auto mb-8 ">
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  className="font-bold text-center"
-                  sx={{ mt:4, mb: 2, color:'green' }}
-
-                >
+                <h2 className="font-bold text-lg text-gray-900 mt-8 mb-4 text-center">
                   {feature.title}
-                </Typography>
+                </h2>
 
                 <img
                   src={`/assets/images/${feature.img}`}
                   alt={feature.title}
                   className="w-full h-auto mb-2"
                 />
-
-                <Typography
-                  variant="body1"
-                  className="text-center"
-                  sx={{ m: 1 }}
-                >
+                <p className="text-justify text-base md:text-xl lg:text-lg text-gray-900 p-1 sm:p-2 md:p-4 mb-1">
                   {feature.description}
-                </Typography>
+                </p>
               </Box>
             ))}
           </div>
