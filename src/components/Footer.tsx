@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 const Footer = () => {
   return (
     <footer style={{ background: 'linear-gradient(to bottom, #fff, #e4e7eb )', minHeight: '200px' }} className="absolute w-full left-0 text-gray-900">
-      <div className="container mx-auto px-6 pt-10 pb-6">
+      <div className="container mx-auto px-10 pt-10 pb-6">
         <div className="flex flex-col sm:flex-row justify-between gap-4">
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h5 className="uppercase mb-6 font-bold">Links</h5>
