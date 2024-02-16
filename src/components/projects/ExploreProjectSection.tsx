@@ -22,9 +22,9 @@ const ExploreProjectSection = ({ github, url }: { github: string; url: string })
               textForLargeScreen="Github: Source Code"
             />
             <ProjectLinkButton
-              onClick={() => (window.location.href = '/')}
-              text="Home"
-              textForLargeScreen="Back to Home"
+              onClick={() => (window.location.href = '/#project-section')}
+              text="Projects"
+              textForLargeScreen="Back to Projects"
             />
           </div>
         </Grid>
