@@ -27,4 +27,5 @@ interface ProjectList {
   skillsIcon?: string;
   skillsIconText?: string;
   intro?:string;
+  mobileIntro?:string;
 }

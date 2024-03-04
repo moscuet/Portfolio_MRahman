@@ -1,7 +1,6 @@
 
 
 .btn-container {
-	width: 150px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -44,6 +43,7 @@
 .btn-container .details-btn:hover a {
 	letter-spacing: 3px;
 }
+
 .btn-container .details-btn a::before {
 	content: "";
 	position: absolute;
@@ -107,3 +107,15 @@
 }
 
 
+
+@media (max-width: 400px) {
+    .btn-container .details-btn {
+		width:100px;
+        height: 20px;
+    }
+
+    .btn-container .details-btn a {
+        border-radius: 15px;
+		font-size: x-small;
+    }
+}
