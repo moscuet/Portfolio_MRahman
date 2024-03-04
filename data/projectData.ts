@@ -8,6 +8,7 @@ export const projectList = {
             skillsIconText: 'Netlify l JWT Authentication',
 
             intro: 'A Front-end book borrowing App, developed with TypeScript, React, Redux, React-Bootstrap & JWT auth. Integrated with a Node.js & Express backend & MongoDB.',
+            mobileIntro:'Front-end: TypeScript, React, Redux, React-Bootstrap & JWT auth. Backend: Node & MongoDB.',
             imageUrl: "lending_loft_01.png",
         },
         {
@@ -16,6 +17,7 @@ export const projectList = {
             skillsIcon: 'library_api.svg',
             skillsIconText: 'Open API',
             intro: 'Backend app, designed for book borrowing services, was developed using TypeScript, Node.js, Express, and MongoDB as part of a full-stack training project.',
+            mobileIntro: 'Backend for a book borrowing Service app: TypeScript, Node.js, Express, and MongoDB.',
             imageUrl: "library_api_01.png",
         },
         {
@@ -23,6 +25,7 @@ export const projectList = {
             title: "Business Intelligence website",
             skillsIcon: 'business_Intelligence.svg',
             intro: 'Team Collaboration with an External Designer, Employing a Tech Stack Featuring Gatsby, GraphQL, Figma, Contentful, Mailchimp, Netlify..',
+            mobileIntro: 'Team Collaboration: Featuring Gatsby, GraphQL, Figma, Contentful, Mailchimp, Netlify..',
             imageUrl: "business_Intelligence_01.png",
         },
         {
@@ -31,9 +34,9 @@ export const projectList = {
             title: "Text Similarity Api",
             skillsIcon: 'text_similarity_api.svg',
             skillsIconText: 'OpenAI l Google Auth',
-            intro: ' a full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
+            intro: 'A full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..',
+            mobileIntro: 'A full-stack app  developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
         },
-
     ]
 }
 

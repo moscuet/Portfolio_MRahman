@@ -141,3 +141,17 @@
     margin-bottom: 120px;
   }
 }
+
+
+
+.mobile-intro {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .desktop-intro {
+    display: none;
+  }
+  .mobile-intro {
+    display: block;
+  }
+}

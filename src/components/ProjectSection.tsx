@@ -11,7 +11,6 @@ export default function ProjectSection() {
   const [showAll, setShowAll] = useState(false);
 const {projects } = projectList
 
-
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   return (
@@ -38,6 +37,7 @@ const {projects } = projectList
               skillsIcon={project.skillsIcon || undefined}
               skillsIconText={project.skillsIconText || undefined}
               intro={project.intro}
+              mobileIntro={project.mobileIntro}
             />
           </Grid>
         ))}
