@@ -16,7 +16,6 @@ const {projects } = projectList
   return (
     <div id="project-section" style={{ paddingTop: '120px' }}
     >
-
       <Grid container justifyContent="center">
         <Grid item>
           <div className="inline-block mb-12">
