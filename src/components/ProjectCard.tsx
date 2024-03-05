@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectList> = ({
               >
                 {mobileIntro}
               </p>
-              <div className="absolute w-full bottom-[72px] sm:bottom-5 md:bottom-0">
+              <div className="absolute w-full bottom-[80px] sm:bottom-5 md:bottom-0">
                 <Link href={`/projects/${id}`} passHref>
                   <div className="details-btn">
                     <a>Details</a>
