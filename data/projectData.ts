@@ -110,6 +110,28 @@ export const projectsData: ProjectType[] = [
             'Page Construction - Built the Contact page with attention to detail and user experience.',
             "SEO Implementation - Implemented search engine optimization to enhance the website's online visibility."
         ],
+        "features": [
+            {
+                "title": "Responsive Web Design",
+                "description": "Features a fluid and adaptive design that ensures optimal viewing and interaction experience across a wide range of devices, from desktops to smartphones.",
+                "img": "business_Intelligence_01.png"
+            },
+            {
+                "title": "Dynamic Content Management",
+                "description": "Leverages Contentful as a powerful headless CMS for dynamic content updates, enabling seamless content management and instant updates across the site.",
+                "img": "business_Intelligence_03.png"
+            },
+            {
+                "title": "Integrated Email Marketing",
+                "description": "Incorporates Mailchimp for streamlined email marketing campaigns, facilitating effective engagement and communication with the audience through automated email workflows.",
+                "img": "business_Intelligence_04.png"
+            },
+            {
+                "title": "Advanced SEO Techniques",
+                "description": "Employs cutting-edge SEO strategies to enhance the website's visibility in search engine results, ensuring higher traffic and engagement.",
+                "img": ""
+            }
+        ],
         developmentSteps: [
             { title: 'Idea Generation', date: '01.01.2023' },
             { title: 'Planning', date: '10.02.2023' },
@@ -136,6 +158,33 @@ export const projectsData: ProjectType[] = [
             'Backend Development - complete backend cycle, from initial design to production deployment.',
             'API Development - Created a scalable open API, adhering to RESTful standards for book borrowing services.',
             'Deployment - Led the backend deployment'
+        ],
+        "features": [
+            {
+                "title": "Advanced Database System",
+                "description": "Leverages MongoDB with Mongoose for efficient data storage, retrieval, and management, ensuring high performance and scalability.",
+                "img": "library_api_02.png"
+            },
+            {
+                "title": "Comprehensive Book Management",
+                "description": "Enables librarians to add, update, and delete book records, including details such as ISBN, author, and publication date.",
+                "img": ""
+            },
+            {
+                "title": "User Account Management",
+                "description": "Provides functionalities for creating and managing user accounts, including roles for librarians and borrowers.",
+                "img": ""
+            },
+            {
+                "title": "Borrowing and Returns Tracking",
+                "description": "Tracks book borrowing and returns, including due dates and overdue notifications.",
+                "img": ""
+            },
+            {
+                "title": "Search and Filter",
+                "description": "Allows users to search for books by various criteria and filter results for ease of access.",
+                "img": ""
+            }
         ],
         developmentSteps: [
             { title: 'Idea Generation', date: '01.01.2023' },
@@ -164,6 +213,35 @@ export const projectsData: ProjectType[] = [
             "Database and Backend Management - Managed backend operations with Prisma Client, utilizing a Planetscale database to ensure efficient performance and data integrity."
         ]
         ,
+
+        "features": [
+      
+            {
+                "title": "Advanced Text Similarity Evaluation",
+                "description": "Employs sophisticated algorithms to analyze and determine the degree of similarity between two input texts, providing valuable insights for textual comparison.",
+                "img": "text_similarity_api_01.png"
+            },
+            {
+                "title": "Google Authentication Integration",
+                "description": "Provides secure login functionality, enabling users to create a personal API key through Google authentication for enhanced security.",
+                "img": "text_similarity_api_02.png"
+            },
+            {
+                "title": "API Key Generation and Management",
+                "description": "Allows users to generate, regenerate, or revoke their API keys, offering full control over their access to the application's services.",
+                "img": "text_similarity_api_04.png"
+            },
+            {
+                "title": "Efficient Request Limit Management",
+                "description": "Implements a fair use policy with a request limit of 10 comparisons per hour to ensure quality service for all users.",
+                "img": ""
+            },
+            {
+                "title": "Personalized User Dashboard",
+                "description": "Offers a comprehensive dashboard where users can manage their API keys—including generation, copying, and removal—view their request history, and see the last use of each key, facilitating seamless management and tracking of their text analysis activities.",
+                "img": "text_similarity_api_05.png"
+            },
+        ],
         developmentSteps: [
             { title: 'Idea Generation', date: '01.01.2023' },
             { title: 'Planning', date: '10.02.2023' },
