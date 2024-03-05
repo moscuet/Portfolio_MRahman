@@ -39,9 +39,8 @@ const ProjectCard: React.FC<ProjectList> = ({
             transform: "scale(1.02)",
           },
         }}
-        className="p-1 xs:p-2"
+        className="p-1 xs:p-2 sm:p-4"
       >
-        {" "}
         <CardMedia
           component="div"
           sx={{
