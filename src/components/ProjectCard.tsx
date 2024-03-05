@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectList> = ({
               >
                 {mobileIntro}
               </p>
-              <div className="btn-container mb-1 mt-1 xs:mt-2 sm:mt-2 md:mt-4">
+              <div className="btn-container mb-1 mt-2 sm:mt-4">
                 <Link href={`/projects/${id}`} passHref>
                   <div className="details-btn">
                     <a>Details</a>
