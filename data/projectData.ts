@@ -37,6 +37,15 @@ export const projectList = {
             intro: 'A full-stack app designed to determine the similarity between two texts, developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..',
             mobileIntro: 'A full-stack app  developed by NextJS 14, Prisma, OpenAI, Tailwind, Google Auth..'
         },
+        {
+            "id": "react-blog-post",
+            "title": "React Blog Post Application",
+            "skillsIcon": "react_blog_post.svg",
+            "skillsIconText": "React.js, Github, Netlify",
+            "intro": "A collaborative Learning project to develop a blogging app using React, enabling users to add, edit, and delete posts",
+            "mobileIntro": "React APP as Learning Project: CRUD application",
+            "imageUrl": "react_blog_post_01.png"
+          }
     ]
 }
 
@@ -250,4 +259,44 @@ export const projectsData: ProjectType[] = [
             { title: 'Deployment', date: '30.05.2023' },
         ]
     },
+    {
+        "id": "react-blog-post",
+        "title": "React Blog Post Application",
+        "images": [
+          "react_blog_post_01.png",
+          "react_blog_post_02.png",
+          "react_blog_post_03.png"
+        ],
+        "github": "https://github.com/moscuet/Blog-Post_React",
+        "url": "https://nifty-shirley-ff48f6.netlify.app/",
+        "techStack": [
+          "React.js",
+          "Github",
+          "Netlify"
+        ],
+        "story": "This learning project is a team effort in developing a blogging app using React, focusing on the functionalities to add, edit, and delete posts using static data. It showcases our collaborative development skills and React proficiency.",
+        "roles": [
+          "Collaborative Development - contributed group discussion, desiging UI and in development phase",
+          "Blog Post Management - Implemented features to create, edit, and delete blog posts and UI interaction."
+        ],
+        "features": [
+          {
+            "title": "Collaborative Development",
+            "description": "Developed through close collaboration among team members, sharing individual code contributions through GitHub.",
+            "img": "react_blog_post_01.png"
+          },
+          {
+            "title": "Blog Post Management",
+            "description": "Users can create, edit, and delete their blog posts, showcasing dynamic content management capabilities.",
+            "img": "react_blog_post_02.png"
+          },
+          {
+            "title": "Simplied UI",
+            "description": "Features a clean, intuitive interface enabling easy management of blog posts, enhancing user experience.",
+            "img": "react_blog_post_03.png"
+          },
+
+        ],
+      }
+      
 ]
