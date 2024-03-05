@@ -20,7 +20,7 @@ export default function Home() {
           </Button>
         </Link>
 
-        <div className="absolute w-full bottom-[72px] sm:bottom-5 md:bottom-0">
+        <div className="absolute w-full bottom-[100px] sm:bottom-10 md:bottom-0">
           <FollowDownAnimation />
         </div>
       </div>
